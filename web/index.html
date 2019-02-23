@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+</head>
+<body>
+    <input id="Login" type="text" placeholder="Login"/> <br />
+    <input id="Password" type="text"  placeholder="Password"><br />
+    <input type="button" name="enter" value="Вход" onclick="sendUserData()" />
+
+    <br>
+
+    <input id="X" type="text" placeholder="X"/> <br />
+    <input id="Y" type="text"  placeholder="Y"><br />
+    <input id="R" type="text" placeholder="R"/> <br />
+    <input id="executionTime" type="text"  placeholder="Ex Time"><br />
+    <input id="currentTime" type="text" placeholder="curr Time"/> <br />
+    <input id="isPointInArea" type="text"  placeholder="is in Area"><br />
+    <input type="button" name="enter" value="Вход" onclick="sendHitData()" />
+
+<script>
+    function sendHitData() {
+        let X = $('#X').val();
+        let Y = $('#Y').val();
+        let R = $('#R').val();
+        let json = (String(JSON.stringify({
+            X: Number(X),
+            Y: Number(Y),
+            R: Number(R),
+        })));
+        console.log(json);
+        $.ajax({
+            url: 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/add',
+            type: "post",
+            contentType: "application/json",
+            data: {
+                content:  json
+            }
+        });
+    }
+
+    function sendUserData() {
+        let Login = $('#Login').val();
+        let Password = $('#Password').val();
+        let json = (String(JSON.stringify({
+            Password: Password,
+            Login: Login
+        })));
+        console.log(json);
+        $.ajax({
+        url: 'http://localhost:8080/Lab_4_war_exploded/web/registration',
+        type: "post",
+        contentType: "application/json",
+        data: {
+            content:  json
+        }
+        });
+    }
+</script>
+</body>
+</html>
