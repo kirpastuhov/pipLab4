@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @NamedQueries({
         @NamedQuery(name = "P4_User.getByLogin", query = "select user.Login from P4_User user where user.Login = :login"),
-        @NamedQuery(name = "P4_User.getByPassword", query = "select user from P4_User user where user.Password = :password and user.Login = :login")
+        @NamedQuery(name = "P4_User.getPassword", query = "select user from P4_User user where user.Password = :password and user.Login = :login")
 })
 public class P4_User {
     @Id

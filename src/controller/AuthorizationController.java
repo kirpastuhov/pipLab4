@@ -39,13 +39,12 @@ public class AuthorizationController {
         String Password = obj.get("Password").toString();
 
         Encryptor encryptor = new Encryptor();
-        String passwordHash = encryptor.encryptPassword(Password);
-        String serchingResult = authorization.getUser(Login);
-        if(serchingResult == Login){
+        String hashPassword = encryptor.encryptPassword(Password);
+        String searchingResult = authorization.getUser(Login,hashPassword);
+        if(searchingResult == "Found"){
             HttpSession session = request.getSession();
             session.setAttribute("login", Login);
         }
     }
-
 }
 
