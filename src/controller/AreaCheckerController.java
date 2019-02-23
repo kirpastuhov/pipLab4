@@ -12,6 +12,14 @@ public class AreaCheckerController {
         double Y = hitData.getY();
         double R = hitData.getR();
         boolean isPointInArea;
+        if (X > 0) {
+            if (Y > 0) {
+                isPointInArea = false;
+            }
+            else {
+                isPointInArea = X * X + Y * Y <= (R * R);
+            }
+        }
         if((X < 0 && X < R) || X > 0){
             isPointInArea = false;
         }
@@ -23,17 +31,17 @@ public class AreaCheckerController {
         } else {
             isPointInArea =  X >= -R / 2 && Y >= -R;
         }
-        int a = (0 - R*1/2) * (-R - 0) - (0 - 0) * (0 + R);
-        int b = (x[2] - x[0]) * (y[3] - y[2]) - (x[3] - x[2]) * (y[2] - y[0]);
-        int c = (x[3] - x[0]) * (y[1] - y[3]) - (x[1] - x[3]) * (y[3] - y[0]);
+        double a = (-R/2 - X) * (0 - 0) - (0 + R/2) * (0 - Y);
+        double b = (0 - X) * (-R - 0) - (0 + R) * (0 - Y);
+        double c = (-R - X) * (0 + R) - (-R/2 - 0) * (-R - Y);
 
         if ((a >= 0 && b >= 0 && c >= 0) || (a <= 0 && b <= 0 && c <= 0))
         {
-
+            isPointInArea = true;
         }
         else
         {
-            Console.WriteLine("Не принадлежит треугольнике");
+            isPointInArea = false;
         }
         return new P4_HitData(X, Y, R, (System.nanoTime() - currentTime) / 1000000000d, System.currentTimeMillis(), isPointInArea);
     }

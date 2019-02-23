@@ -12367,8 +12367,8 @@
     <schema id="2041" parent="3" name="s242093">
       <ObjectId>18044</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionTimestamp>2019-02-23.18:56:05.288</IntrospectionTimestamp>
-      <IntrospectionStateNumber>29338694</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2019-02-23.22:43:50.531</IntrospectionTimestamp>
+      <IntrospectionStateNumber>29338698</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -15943,7 +15943,7 @@
     <table id="2895" parent="2041" name="p4_hitdata">
       <ObjectId>1186241</ObjectId>
       <Owner>s242093</Owner>
-      <StateNumber>29338693</StateNumber>
+      <StateNumber>29338698</StateNumber>
     </table>
     <table id="2896" parent="2041" name="p4_user">
       <ObjectId>1186023</ObjectId>
@@ -18180,19 +18180,17 @@ id_user</ColNames>
       <StateNumber>29338682</StateNumber>
       <TypeId>701</TypeId>
     </column>
-    <column id="3222" parent="2895" name="ispointinarea">
-      <Position>7</Position>
-      <DataType>double precision|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>29338682</StateNumber>
-      <TypeId>701</TypeId>
-    </column>
-    <column id="3223" parent="2895" name="user_id">
+    <column id="3222" parent="2895" name="user_id">
       <Position>9</Position>
       <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>29338692</StateNumber>
+      <StateNumber>29338696</StateNumber>
       <TypeId>23</TypeId>
+    </column>
+    <column id="3223" parent="2895" name="ispointinarea">
+      <Position>10</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>29338698</StateNumber>
+      <TypeId>16</TypeId>
     </column>
     <index id="3224" parent="2895" name="p4_hitdata_pkey">
       <ObjectId>1186245</ObjectId>

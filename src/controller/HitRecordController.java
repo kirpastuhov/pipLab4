@@ -26,7 +26,8 @@ public class HitRecordController {
     @Produces(MediaType.APPLICATION_JSON)
     public  void addHitData(String content) throws UnsupportedEncodingException {
 
-        P4_HitData hitData = new P4_HitData();
+        P4_HitData rawHitData = new P4_HitData();
+        //decode from urlencoded string
         String decoded = java.net.URLDecoder.decode(content, "UTF-8");
         String[] json  = decoded.split("=", 2);
 
@@ -38,13 +39,13 @@ public class HitRecordController {
         JsonElement Y = obj.get("Y");
         JsonElement R = obj.get("R");
 
-        hitData.setX(Double.parseDouble(X.toString()));
-        hitData.setY(Double.parseDouble(Y.toString()));
-        hitData.setR(Double.parseDouble(R.toString()));
+        rawHitData.setX(Double.parseDouble(X.toString()));
+        rawHitData.setY(Double.parseDouble(Y.toString()));
+        rawHitData.setR(Double.parseDouble(R.toString()));
 
         AreaCheckerController areaCheckerController = new AreaCheckerController();
-        areaCheckerController.isPointInArea(hitData);
-        hitDataRecord.addHitData(hitData);
+        P4_HitData fullHitData =areaCheckerController.isPointInArea(rawHitData);
+        hitDataRecord.addHitData(fullHitData);
 
     }
     @POST
