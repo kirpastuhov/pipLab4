@@ -3,7 +3,8 @@ package controller;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import ejb.Authorization;
+import ejb.Authentication;
+import util.Encryptor;
 
 import javax.ejb.EJB;
 import javax.servlet.http.HttpServletRequest;
@@ -14,19 +15,20 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.io.UnsupportedEncodingException;
 
 @Path("/sign")
-public class AuthorizationController {
+public class AuthenticationController {
 
     @EJB
-    Authorization authorization;
+    Authentication authorization;
 
     @POST
     @Path("/in")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public  void signIn(String content, @Context HttpServletRequest request) throws UnsupportedEncodingException {
+    public Response signIn(String content, @Context HttpServletRequest request) throws UnsupportedEncodingException {
 
         String decoded = java.net.URLDecoder.decode(content, "UTF-8");
         String[] json  = decoded.split("=", 2);
@@ -44,7 +46,9 @@ public class AuthorizationController {
         if(searchingResult == "Found"){
             HttpSession session = request.getSession();
             session.setAttribute("login", Login);
+            return  Response.ok().build();
         }
+        return  Response.status(500).build();
     }
 }
 

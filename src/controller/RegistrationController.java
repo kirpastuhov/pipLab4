@@ -5,6 +5,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import ejb.Registration;
 import model.P4_User;
+import util.Encryptor;
 
 import javax.ejb.EJB;
 import javax.ws.rs.Consumes;

@@ -8,19 +8,40 @@
 <body>
     <input id="Login" type="text" placeholder="Login"/> <br />
     <input id="Password" type="text"  placeholder="Password"><br />
-    <input type="button" name="enter" value="Вход" onclick="sendUserData()" />
+    <input type="button" name="enter" value="Регистрация" onclick="sendUserData()" />
 
     <br>
 
     <input id="X" type="text" placeholder="X"/> <br />
     <input id="Y" type="text"  placeholder="Y"><br />
     <input id="R" type="text" placeholder="R"/> <br />
-    <input id="executionTime" type="text"  placeholder="Ex Time"><br />
-    <input id="currentTime" type="text" placeholder="curr Time"/> <br />
-    <input id="isPointInArea" type="text"  placeholder="is in Area"><br />
-    <input type="button" name="enter" value="Вход" onclick="sendHitData()" />
+    <input type="button" name="enter" value="Отправить точки" onclick="sendHitData()" />
+
+    <br>
+
+    <input id="Login_S" type="text" placeholder="Login"/> <br />
+    <input id="Password_S" type="text"  placeholder="Password"><br />
+    <input type="button" name="enter" value="Вход" onclick="signIn()" />
 
 <script>
+    function signIn() {
+        let Login = $('#Login_S').val();
+        let Password = $('#Password_S').val();
+        let json = (String(JSON.stringify({
+            Password: Password,
+            Login: Login
+        })));
+        console.log(json);
+        $.ajax({
+            url: 'http://localhost:8080/Lab_4_war_exploded/web/sign/in',
+            type: "post",
+            contentType: "application/json",
+            data: {
+                content:  json
+            }
+        });
+    }
+
     function sendHitData() {
         let X = $('#X').val();
         let Y = $('#Y').val();

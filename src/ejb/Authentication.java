@@ -8,7 +8,7 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
 @Stateless(name="Authorization")
-public class Authorization {
+public class Authentication {
 
     private EntityManager em = Persistence.createEntityManagerFactory("P4_User").createEntityManager();
     public String getUser(String login, String hashPassword){
