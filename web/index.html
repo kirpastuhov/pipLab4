@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://unpkg.com/vue"></script>
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-    <script src="/path/to/jquery.cookie.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
-    <input id="Login" type="text" placeholder="Login"/> <br />
+    <!-- <input id="Login" type="text" placeholder="Login"/> <br />
     <input id="Password" type="text"  placeholder="Password"><br />
     <input type="button" name="enter" value="Регистрация" onclick="sendUserData()" />
 
@@ -23,7 +23,45 @@
 
     <input id="Login_S" type="text" placeholder="Login"/> <br />
     <input id="Password_S" type="text"  placeholder="Password"><br />
-    <input type="button" name="enter" value="Вход" onclick="signIn()" />
+    <input type="button" name="enter" value="Вход" onclick="signIn()" /> -->
+
+
+    <div id="app">
+        <p>Login</p>
+        <form id="form" v-on:submit.prevent="addUser">
+            <input type="text" id="Login_S" v-model="newUser.name" placeholder="Login">
+            <input type="password" id="Password_S" v-model="newUser.email" placeholder="Password">
+            <input type="submit" value="Sign In" onclick="signIn()">
+        </form>
+        <ul class="errors">
+            <li v-show="!validation.name">Name cannot be empty.</li>
+            <li v-show="!validation.email">Password cannot be empty</li>
+        </ul>
+    </div>
+    <div id="register">
+        <p>Register User</p>
+        <input type="text" id="Login" v-model="newUser.name" placeholder="Login">
+        <input type="password" id="Password" v-model="newUser.email" placeholder="Password">
+        <input type="button" name="enter" value="Register" onclick="sendUserData()" />
+        <ul class="errors">
+            <li v-show="!validation.name">Name cannot be empty.</li>
+            <li v-show="!validation.email">Password cannot be empty</li>
+        </ul>
+    </div>
+    <div id="dots">
+        <input id="X" type="text" v-model="newDot.x" placeholder="X"/> <br />
+        <input id="Y" type="text"  v-model="newDot.y" placeholder="Y"><br />
+        <input id="R" type="text" v-model="newDot.r" placeholder="R"/> <br />
+        <input type="button" name="enter" value="Отправить точки" onclick="sendHitData()" />
+        <ul class="errors">
+            <li v-show="!validation.x">Incorrect X.</li>
+            <li v-show="!validation.y">Incorrect Y.</li>
+            <li v-show="!validation.r">Incorrect R.</li>
+        </ul>
+    </div>
+    <script src="js/app.js"></script>
+    </body>
+    </html>
 
 <script>
     function signIn() {
