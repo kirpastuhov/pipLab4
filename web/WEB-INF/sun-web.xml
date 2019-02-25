@@ -1,0 +1,6 @@
+<sun-web-app>
+    <security-role-mapping>
+        <role-name>USER</role-name>
+        <group-name>user</group-name>
+    </security-role-mapping>
+</sun-web-app>

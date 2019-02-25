@@ -27,16 +27,8 @@
       <change beforePath="$PROJECT_DIR$/../Lab#2/web/javascript/drawChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab#2/web/javascript/drawChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab#2/web/javascript/sendParams.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab#2/web/javascript/sendParams.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab#2/web/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab#2/web/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/controller/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/model/P4_User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/model/P4_User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Encryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Encryptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ejb/Authorization.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/P4_User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/P4_User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/HitRecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/HitRecordController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -128,7 +120,7 @@
     <session id="1544537544">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -143,45 +135,45 @@
         <counts>
           <entry key="class" value="4" />
           <entry key="css" value="2" />
-          <entry key="html" value="7" />
-          <entry key="java" value="26" />
-          <entry key="js" value="10" />
+          <entry key="html" value="8" />
+          <entry key="java" value="29" />
+          <entry key="js" value="11" />
           <entry key="sql" value="1" />
-          <entry key="xml" value="6" />
+          <entry key="xml" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="4" />
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="7" />
-          <entry key="JAVA" value="26" />
-          <entry key="JavaScript" value="10" />
+          <entry key="HTML" value="8" />
+          <entry key="JAVA" value="29" />
+          <entry key="JavaScript" value="11" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="6" />
+          <entry key="XML" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="44" />
           <entry key="dummy" value="34" />
-          <entry key="html" value="938" />
-          <entry key="java" value="3480" />
+          <entry key="html" value="1028" />
+          <entry key="java" value="3761" />
           <entry key="js" value="72" />
           <entry key="sql" value="88" />
           <entry key="txt" value="12" />
-          <entry key="xml" value="43" />
+          <entry key="xml" value="128" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="44" />
-          <entry key="HTML" value="934" />
-          <entry key="JAVA" value="3480" />
+          <entry key="HTML" value="1024" />
+          <entry key="JAVA" value="3761" />
           <entry key="JavaScript" value="72" />
           <entry key="PLAIN_TEXT" value="46" />
           <entry key="SQL" value="92" />
-          <entry key="XML" value="43" />
+          <entry key="XML" value="128" />
         </counts>
       </usages-collector>
     </session>
@@ -191,6 +183,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ejb/Authentication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/RegistrationController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -204,10 +208,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ejb/Authentication.java">
+        <entry file="file://$PROJECT_DIR$/src/controller/AuthenticationController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="109">
+              <caret line="31" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -216,13 +220,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/AuthenticationController.java">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/sun-web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -230,26 +231,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/P4_User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="276">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -258,7 +241,7 @@
         <entry file="file://$PROJECT_DIR$/src/controller/HitRecordController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -267,31 +250,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/AreaCheckerController.java">
+        <entry file="file://$PROJECT_DIR$/src/filter/AccessFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+            <state relative-caret-position="88">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/signin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="274">
+              <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/util/Encryptor.java">
+        <entry file="file://$PROJECT_DIR$/web/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+            <state relative-caret-position="90">
+              <caret line="5" selection-start-line="5" selection-end-line="6" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ejb/HitDataRecord.java">
+        <entry file="file://$PROJECT_DIR$/web/js/jquery.cookie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -301,10 +290,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="AnnotationType" />
+        <option value="HTML File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -317,7 +306,6 @@
         <option value="$PROJECT_DIR$/web/css/style.css" />
         <option value="$PROJECT_DIR$/web/js/clock.js" />
         <option value="$PROJECT_DIR$/src/controller/ApplicationController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/JWTToken.java" />
         <option value="$PROJECT_DIR$/src/controller/JWTToken.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -330,7 +318,6 @@
         <option value="$PROJECT_DIR$/src/ejb/HitDataRecord.java" />
         <option value="$PROJECT_DIR$/src/controller/AreaCheckerController.java" />
         <option value="$PROJECT_DIR$/src/model/HitInfo.java" />
-        <option value="$PROJECT_DIR$/src/controller/HitRecordController.java" />
         <option value="$PROJECT_DIR$/src/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/controller/RegistrationController.java" />
         <option value="$PROJECT_DIR$/src/controller/SignController.java" />
@@ -338,7 +325,13 @@
         <option value="$PROJECT_DIR$/src/model/P4_User.java" />
         <option value="$PROJECT_DIR$/src/ejb/Authorization.java" />
         <option value="$PROJECT_DIR$/src/controller/AuthorizationController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/sun-web.xml" />
+        <option value="$PROJECT_DIR$/src/controller/HitRecordController.java" />
+        <option value="$PROJECT_DIR$/src/filter/AccessFilter.java" />
+        <option value="$PROJECT_DIR$/web/js/jquery.cookie.js" />
         <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/signin.html" />
       </list>
     </option>
   </component>
@@ -376,7 +369,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="1944" />
@@ -437,6 +430,12 @@
               <item name="pip4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab#4" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pip4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab#4" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="META-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -454,14 +453,13 @@
               <item name="pip4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab#4" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pip4" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab#4" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -478,7 +476,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551014793403" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551022483178" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -665,12 +663,12 @@
       <workItem from="1550886161651" duration="3709000" />
       <workItem from="1550933523394" duration="5739000" />
       <workItem from="1550948466383" duration="7448000" />
-      <workItem from="1551005354065" duration="3775000" />
+      <workItem from="1551005354065" duration="10531000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66287000" />
+    <option name="totallyTimeSpent" value="73043000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -685,7 +683,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49508196" visible="true" weight="0.27125505" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49508196" visible="true" weight="0.27044535" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -720,7 +718,7 @@
       <window_info anchor="right" id="CDI" order="9" weight="0.32955465" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49508196" visible="true" weight="0.26639676" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49508196" visible="true" weight="0.27125505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -729,7 +727,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info id="Persistence" order="8" sideWeight="0.5017794" side_tool="true" weight="0.2534413" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.4572954" />
+      <window_info active="true" anchor="bottom" id="Run" order="0" visible="true" weight="0.4572954" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.3291815" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" weight="0.3291815" />
       <window_info anchor="bottom" id="Messages" order="3" weight="0.3291815" />
@@ -871,30 +869,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/P4_User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/HitRecordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -905,33 +883,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ejb/Authentication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/AuthenticationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="37" column="48" selection-start-line="37" selection-start-column="48" selection-end-line="37" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -949,10 +900,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ejb/Authentication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/sun-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/HitRecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/AuthenticationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="31" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/filter/AccessFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jquery.cookie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="3" lean-forward="true" selection-start-column="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+        <state relative-caret-position="90">
+          <caret line="5" selection-start-line="5" selection-end-line="6" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/signin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
         </state>
       </provider>
     </entry>
