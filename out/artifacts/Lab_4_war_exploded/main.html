@@ -3,8 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jcanvas.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/inputCheck.js"></script>
+
+    <script src="js/check.js"></script>
+
+    <script src="js/updateY.js"></script>
+
+    <script src="js/fields.js"></script>
+
+    <script src="js/drawAxes.js"></script>
+
+    <script src="js/chart.js"></script>
+
+    <script src="js/drawPoint.js"></script>
+
+
 </head>
 <body>
-    Ты авторизован!
+    <div class="row">
+        <div id="canvas">
+        <canvas id="myCanvas" width="500" height="500"
+                style="border:1px solid #dddddd; background-color: rgba(75, 76, 77,0.7);">
+            <p>This is fallback content for users of assistive technologies or of browsers that don't have full support for the Canvas API.</p>
+        </canvas>
+    </div>
+        <div class="col-sm">
+            <form action="control" method="POST" onsubmit="return false;" id="form">
+                <div class="row disable-selection">
+                    <div class="form-group col-sm" style="text-align: center">
+                        <label>X</label>
+                        <select class="form-control" id="inputX" name="inputX"></select>
+                    </div>
+                    <div class="form-group col-sm" style="text-align: center">
+                        <label>Y</label>
+                        <input type="text" maxlength="10" class="form-control is-invalid" id="inputY" name="inputY"
+                               placeholder="(-3, 3)"
+                               oninput="updateY()" onchange="updateY()">
+                    </div>
+                    <div class="form-group col-sm" style="text-align: center">
+                        <label> R</label>
+                        <select name="inputR" class="form-control" id="inputR"></select>
+                    </div>
+                </div>
+
+                <div style="text-align: center" class="disable-selection">
+                    <a href="javascript:void(0)" class="btn-submit sharp" style="border:1px solid #dddddd;" id="checkpoint">
+                        Check the point</a>
+
+                </div>
+            </form>
+            <div id="el"></div>
+
+            <!-- using string template here to work around HTML <option> placement restriction -->
+            <script type="text/x-template" id="demo-template">
+                <div>
+                    <p>Selected: {{ selected }}</p>
+                    <select2 :options="options" v-model="selected">
+                        <option disabled value="0">Select one</option>
+                    </select2>
+                </div>
+            </script>
+
+            <script type="text/x-template" id="select2-template">
+                <select>
+                    <slot></slot>
+                </select>
+            </script>
+        </div>
+    </div>
+            Ты авторизован!
+    <script src="js/main.js"></script>
 </body>
 </html>
