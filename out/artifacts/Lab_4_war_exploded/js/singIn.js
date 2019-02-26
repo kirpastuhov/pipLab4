@@ -14,7 +14,12 @@ function signIn() {
             content:  json
         },
          success:function () {
-             location.href = 'http://localhost:8080/Lab_4_war_exploded/main.html'
+            location.href = 'http://localhost:8080/Lab_4_war_exploded/main.html'
+         },
+         statusCode: {
+             500: function () {
+                 $('.hide-block').html("User now found");
+             }
          }
     });
 }

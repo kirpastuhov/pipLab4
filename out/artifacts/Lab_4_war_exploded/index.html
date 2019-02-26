@@ -8,6 +8,10 @@
     <script src="js/singIn.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
 </head>
+<div class='header' >
+    <h3>Saraev Vladislav | Kirill Pastuhov</h3>
+    <h3>P3218 v.19083</h3>
+</div>
  <div id="app">
         <p>Login</p>
         <form id="form" v-on:submit.prevent="addUser">
@@ -19,7 +23,11 @@
             <li v-show="!validation.name">Name cannot be empty.</li>
             <li v-show="!validation.email">Password cannot be empty</li>
         </ul>
-    </div>
+     <button onclick="location.href='http://localhost:8080/Lab_4_war_exploded/register.html'">Registration</button>
+ </div>
+<div class="hide-block">
+</div>
+
     <!--<div id="dots">-->
         <!--<input id="X" type="text" v-model="newDot.x" placeholder="X"/> <br />-->
         <!--<input id="Y" type="text"  v-model="newDot.y" placeholder="Y"><br />-->

@@ -48,11 +48,10 @@ public class AuthenticationController {
         String searchingResult = authorization.getUser(Login,hashPassword);
         HttpSession session = request.getSession();
         if(searchingResult == "Found"){
-
             session.setAttribute("login", Login);
             return  Response.ok().build();
         }
-        return  Response.status(400).build();
+        return  Response.status(500).build();
     }
 }
 

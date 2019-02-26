@@ -7,7 +7,6 @@ function sendHitData() {
         Y: Number(Y),
         R: Number(R),
     })));
-    //console.log(json);
     $.ajax({
         url: 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/add',
         type: "post",

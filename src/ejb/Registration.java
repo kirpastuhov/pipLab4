@@ -11,19 +11,18 @@ import javax.persistence.TypedQuery;
 @Stateless(name="Registration")
 public class Registration {
     private EntityManager em = Persistence.createEntityManagerFactory("P4_User").createEntityManager();
-    public void addUser(P4_User user){
+    public int addUser(P4_User user){
         TypedQuery<String> query = em.createNamedQuery("P4_User.getByLogin", String.class);
         query.setParameter("login", user.getLogin());
         try {
             query.getSingleResult();
-            return;
+            return 500;
         }
         catch (Exception e){
             em.getTransaction().begin();
             em.persist(user);
             em.getTransaction().commit();
+            return 200;
         }
-
     }
-
 }

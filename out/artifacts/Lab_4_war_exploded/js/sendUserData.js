@@ -11,6 +11,14 @@ function sendUserData() {
         contentType: "application/json",
         data: {
             content:  json
+        },
+        success:function () {
+            location.href = 'http://localhost:8080/Lab_4_war_exploded/main.html'
+        },
+        statusCode: {
+            500: function () {
+                $('.hide-block').html("Произошел троллинг, такой логин уже занят.");
+            }
         }
     });
 }
