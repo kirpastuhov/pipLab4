@@ -48,7 +48,7 @@ public class AuthenticationController {
             session.setAttribute("login", Login);
             return  Response.ok().build();
         }
-        return  Response.status(500).build();
+        return  Response.status(400).build();
     }
 }
 

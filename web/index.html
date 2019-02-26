@@ -98,6 +98,11 @@
             contentType: "application/json",
             data: {
                 content:  json
+            },
+            success:function (response) {
+
+                let st = JSON.parse(response);
+                alert(st);
             }
         });
     }
