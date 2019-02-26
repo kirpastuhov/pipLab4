@@ -5,7 +5,25 @@
     <title>Title</title>
 </head>
 <body>
+    <div id="el"></div>
+
+    <!-- using string template here to work around HTML <option> placement restriction -->
+    <script type="text/x-template" id="demo-template">
+        <div>
+            <p>Selected: {{ selected }}</p>
+            <select2 :options="options" v-model="selected">
+                <option disabled value="0">Select one</option>
+            </select2>
+        </div>
+    </script>
+
+    <script type="text/x-template" id="select2-template">
+        <select>
+            <slot></slot>
+        </select>
+    </script>
     Ты не авторизован! Авторизуйся!!
     <a href="index.html">НАЗАД</a>
+    <script src="js/app.js"></script>
 </body>
 </html>
