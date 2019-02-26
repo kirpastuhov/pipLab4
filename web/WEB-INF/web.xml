@@ -10,5 +10,13 @@
         </session-timeout>
     </session-config>
 
+    <filter>
+        <filter-name>AccessFilter</filter-name>
+        <filter-class>filter.AccessFilter</filter-class>
+    </filter>
 
+    <filter-mapping>
+        <filter-name>AccessFilter</filter-name>
+        <url-pattern>/main.html</url-pattern>
+    </filter-mapping>
 </web-app>

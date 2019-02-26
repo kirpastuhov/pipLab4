@@ -5,7 +5,6 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import ejb.HitDataRecord;
-import filter.AccessFilter;
 import model.P4_HitData;
 
 import javax.ejb.EJB;
@@ -29,8 +28,6 @@ public class HitRecordController {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public Response addHitData(String content) throws IOException {
-
-        AccessFilter filter = new AccessFilter();
 
         P4_HitData rawHitData = new P4_HitData();
         //decode from urlencoded string
@@ -65,8 +62,6 @@ public class HitRecordController {
         hitDataRecord.addHitData(fullHitData);
 
         return Response.ok(jsonResponse).build();
-
-
 
     }
     @POST

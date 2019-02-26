@@ -5,7 +5,6 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import ejb.Authentication;
 import util.Encryptor;
-
 import javax.ejb.EJB;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -16,10 +15,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
 import java.io.UnsupportedEncodingException;
 
 @Path("/sign")
 public class AuthenticationController {
+
+    @Context
+    UriInfo uriInfo;
 
     @EJB
     Authentication authorization;
@@ -43,8 +46,9 @@ public class AuthenticationController {
         Encryptor encryptor = new Encryptor();
         String hashPassword = encryptor.encryptPassword(Password);
         String searchingResult = authorization.getUser(Login,hashPassword);
+        HttpSession session = request.getSession();
         if(searchingResult == "Found"){
-            HttpSession session = request.getSession();
+
             session.setAttribute("login", Login);
             return  Response.ok().build();
         }
