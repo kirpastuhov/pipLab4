@@ -23,60 +23,51 @@
 
     <script src="js/drawPoint.js"></script>
 
-
 </head>
 <body>
-    <div class="row">
-        <div id="canvas">
+<div class="row">
+    <div id="canvas">
         <canvas id="myCanvas" width="500" height="500"
                 style="border:1px solid #dddddd; background-color: rgba(75, 76, 77,0.7);">
-            <p>This is fallback content for users of assistive technologies or of browsers that don't have full support for the Canvas API.</p>
+            <p>This is fallback content for users of assistive technologies or of browsers that don't have full support
+                for the Canvas API.</p>
         </canvas>
     </div>
-        <div class="col-sm">
-            <form action="control" method="POST" onsubmit="return false;" id="form">
-                <div class="row disable-selection">
-                    <div class="form-group col-sm" style="text-align: center">
-                        <label>X</label>
-                        <select class="form-control" id="inputX" name="inputX"></select>
-                    </div>
-                    <div class="form-group col-sm" style="text-align: center">
-                        <label>Y</label>
-                        <input type="text" maxlength="10" class="form-control is-invalid" id="inputY" name="inputY"
-                               placeholder="(-3, 3)"
-                               oninput="updateY()" onchange="updateY()">
-                    </div>
-                    <div class="form-group col-sm" style="text-align: center">
-                        <label> R</label>
-                        <select name="inputR" class="form-control" id="inputR"></select>
-                    </div>
+    <div class="col-sm">
+        <form action="control" method="POST" onsubmit="return false;" id="form">
+            <div class="row disable-selection">
+                  <div id="X" class="form-group col-sm" style="text-align: center">
+                    <label>X</label>
+                    <select v-model="inputX" name="X" id="inputX" class="form-control" >
+                        <option v-for="X in Xs" :value="X">{{ X }}</option>
+                    </select>
                 </div>
 
-                <div style="text-align: center" class="disable-selection">
-                    <a href="javascript:void(0)" class="btn-submit sharp" style="border:1px solid #dddddd;" id="checkpoint">
-                        Check the point</a>
-
+                <div class="form-group col-sm" style="text-align: center">
+                    <label>Y</label>
+                    <input type="text" maxlength="10" class="form-control is-invalid" id="inputY" name="inputY"
+                           placeholder="(-3, 3)"
+                           oninput="updateY()" onchange="updateY()">
                 </div>
-            </form>
-            <div id="el"></div>
-
-            <!-- using string template here to work around HTML <option> placement restriction -->
-            <script type="text/x-template" id="demo-template">
-                <div>
-                    <p>Selected: {{ selected }}</p>
-                    <select2 :options="options" v-model="selected">
-                        <option disabled value="0">Select one</option>
-                    </select2>
+                <div id="R" class="form-group col-sm" style="text-align: center">
+                    <label>R</label>
+                    <select v-model="inputR" name="R" id="inputR" class="form-control" >
+                        <option v-for="R in Rs" :value="R">{{ R }}</option>
+                    </select>
                 </div>
-            </script>
 
-            <script type="text/x-template" id="select2-template">
-                <select>
-                    <slot></slot>
-                </select>
-            </script>
-        </div>
+            </div>
+
+            <div style="text-align: center" class="disable-selection">
+                <a href="javascript:void(0)" class="btn-submit sharp" style="border:1px solid #dddddd;" id="checkpoint">
+                    Check the point</a>
+
+            </div>
+        </form>
+
+
     </div>
-    <script src="js/main.js"></script>
+</div>
+<script src="js/main.js"></script>
 </body>
 </html>
