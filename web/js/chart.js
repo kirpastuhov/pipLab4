@@ -5,7 +5,8 @@ let _radius = 0;
 $(document).ready(updateAndDraw);
 
 function updateRadiusValue() {
-    _radius = Number($("#inputR").val());
+    _radius = Number($("#app").val());
+    console.log(_radius)
 }
 
 
