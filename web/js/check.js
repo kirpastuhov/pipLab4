@@ -50,8 +50,11 @@ function sendHitData(X, Y, R) {
         contentType: "application/json",
         success: function (response) {
 
-            let st = JSON.parse(response.toString());
-            console.log(st);
+            //let st = $.parseJSON(('\'' + response + '\'').toString());
+            console.log(response.x);
+            console.log(response.y);
+            console.log(response.r);
+            console.log(response.isPointInArea);
         },
         data: {
             content:  json

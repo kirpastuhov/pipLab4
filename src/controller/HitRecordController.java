@@ -14,7 +14,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.FileWriter;
 import java.io.IOException;
 
 @Path("/hitdata")
@@ -50,15 +49,6 @@ public class HitRecordController {
         P4_HitData fullHitData =areaCheckerController.isPointInArea(rawHitData);
         Gson gson = new Gson();
         String jsonResponse = gson.toJson(fullHitData);
-        try(FileWriter writer = new FileWriter("C:\\Users\\HP\\Desktop\\test.txt", false))
-        {
-            writer.write(jsonResponse);
-            writer.flush();
-        }
-        catch(IOException ex){
-
-            System.out.println(ex.getMessage());
-        }
         hitDataRecord.addHitData(fullHitData);
 
         return Response.ok(jsonResponse).build();

@@ -13,7 +13,7 @@ function sendHitData(X, Y, R) {
         contentType: "application/json",
         success: function (response) {
 
-            let st = JSON.parse(response.toString());
+            let st = JSON.parse(response);
             console.log(st);
         },
         data: {

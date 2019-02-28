@@ -135,6 +135,30 @@ table#data td, th{
     padding: 5px;
     text-align: center;
 }
+#app{
+    color: #dddddd;
+    border: 2px #dddddd;
+    /*background-color: #dddddd;*/
+}
+#app .dropdown li {
+    border-bottom: 1px solid rgba(112, 128, 144, 0.1)
+}
+
+#app .dropdown li:last-child {
+    border-bottom: none;
+}
+
+#app .dropdown li a {
+    padding: 10px 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+#app .dropdown li a .fa {
+    padding-right: 0.5em;
+}
 
 #canvas
 {
