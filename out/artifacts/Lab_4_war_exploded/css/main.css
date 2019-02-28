@@ -190,3 +190,12 @@ table#data td, th{
 .btn-submit:active {
     background-color: SlateGrey; /* Цвет кнопки при нажатии */
 }
+.form-group{
+    margin-left: 25px;
+}
+.col-lg-6{
+    margin-left: 30px;
+}
+.table{
+    text-decoration-color: white;
+}
