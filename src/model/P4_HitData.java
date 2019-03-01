@@ -1,18 +1,19 @@
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "P4_HitData.getByLoginPassword", query = "select hitData from P4_HitData hitData where hitData.user_Id = :user_id")
+})
 public class P4_HitData {
     @Id
     @GeneratedValue
     private int id;
-
+    private int user_Id;
     private double x;
     private double y;
     private double r;
@@ -20,13 +21,14 @@ public class P4_HitData {
     private double currentTime;
     private boolean isPointInArea;
 
-    public P4_HitData(double x, double y, double r, double executionTime, double currentTime, boolean isPointInArea) {
+    public P4_HitData(double x, double y, double r, double executionTime, double currentTime, int user_Id, boolean isPointInArea) {
         this.x = x;
         this.y = y;
         this.r = r;
         this.executionTime = executionTime;
         this.currentTime = currentTime;
         this.isPointInArea = isPointInArea;
+        this.user_Id = user_Id;
     }
 
     public P4_HitData() {
@@ -92,5 +94,13 @@ public class P4_HitData {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getUser_Id() {
+        return user_Id;
+    }
+
+    public void setUser_Id(int user_Id) {
+        this.user_Id = user_Id;
     }
 }

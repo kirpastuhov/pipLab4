@@ -15,6 +15,10 @@ public class P4_User {
     private String Login;
     private String Salt;
 
+    public int getId() {
+        return Id;
+    }
+
     public String getSalt() {
         return Salt;
     }

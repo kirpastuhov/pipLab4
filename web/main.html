@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Lab 4</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
     <script src="https://unpkg.com/vue"></script>
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="js/jcanvas.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <script src="js/inputCheck.js"></script>
@@ -16,6 +16,7 @@
     <script src="js/drawAxes.js"></script>
     <script src="js/chart.js"></script>
     <script src="js/drawPoint.js"></script>
+    <script src="js/addTableRow.js"></script>
 </head>
 <body>
 <div class="row">
@@ -53,17 +54,18 @@
                 <a href="javascript:void(0)" class="btn-submit sharp" style="border:1px solid #dddddd;" id="checkpoint">
                     Check the point</a>
             </div>
+            <button onclick="addTableRow()">Test</button>
         </form>
-        <table class="table">
+        <table class="table" id="hits_table">
             <thead>
             <tr>
-                <th>#</th>
-                <th>X</th>
-                <th>Y</th>
-                <th>R</th>
-                <th>Is in area?</th>
-                <th>Current time</th>
-                <th>Execution time</th>
+                <th id="number_table">#</th>
+                <th id="X_table">X</th>
+                <th id="Y_table">Y</th>
+                <th id="R_table">R</th>
+                <th id="IsInArea_table">Is in area?</th>
+                <th id="CurrTime_table">Current time</th>
+                <th id="ExecTime_table">Execution time</th>
             </tr>
             </thead>
             <tbody>

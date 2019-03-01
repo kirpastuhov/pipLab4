@@ -1,7 +1,4 @@
 function sendHitData(X, Y, R) {
-    // let X = $('#X').val();
-    // let Y = $('#Y').val();
-    // let R = $('#R').val();
     let json = (String(JSON.stringify({
         X: Number(X),
         Y: Number(Y),

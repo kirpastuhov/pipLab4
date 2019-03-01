@@ -4,8 +4,10 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import ejb.Registration;
+import ejb.UserRecord;
 import model.P4_User;
 import util.Encryptor;
+
 import javax.ejb.EJB;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -28,6 +30,9 @@ public class RegistrationController {
     @EJB
     private Registration registration;
 
+    @EJB
+    private UserRecord userRecord;
+
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -41,17 +46,20 @@ public class RegistrationController {
         JsonElement elem = jsonParser.parse(json[1]);
         JsonObject obj = elem.getAsJsonObject();
 
+        Encryptor encryptor = new Encryptor();
         String Login = obj.get("Login").toString();
         String Password = obj.get("Password").toString();
+        String hashPassword = encryptor.encryptPassword(Password);
 
-        Encryptor encryptor = new Encryptor();
-        user.setPassword(encryptor.encryptPassword(Password));
+        user.setPassword(hashPassword);
         user.setLogin(Login);
         user.setSalt(encryptor.generateSalt());
         int statusCode = registration.addUser(user);
         HttpSession session = request.getSession();
         if(statusCode == 200){
+            int user_id = userRecord.getUser(Login,hashPassword).getId();
             session.setAttribute("login", Login);
+            session.setAttribute("Id", user_id);
             return  Response.ok().build();
         }
         else{

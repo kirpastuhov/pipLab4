@@ -11,16 +11,16 @@ import javax.persistence.TypedQuery;
 public class Authentication {
 
     private EntityManager em = Persistence.createEntityManagerFactory("P4_User").createEntityManager();
-    public String getUser(String login, String hashPassword){
+    public boolean findUser(String login, String hashPassword){
         TypedQuery<P4_User> query = em.createNamedQuery("P4_User.getPassword", P4_User.class);
         query.setParameter("login",login);
         query.setParameter("password",hashPassword);
         try {
             P4_User user = query.getSingleResult();
-            return "Found";
+            return true;
         }
         catch (Exception e){
-            return "Not found";
+            return false;
         }
     }
 }

@@ -2,11 +2,12 @@ package controller;
 
 import model.P4_HitData;
 
+import javax.servlet.http.HttpSession;
 
 
 public class AreaCheckerController {
 
-    public P4_HitData isPointInArea(P4_HitData hitData){
+    public P4_HitData isPointInArea(P4_HitData hitData, HttpSession session){
         long currentTime = System.nanoTime();
         double X = hitData.getX();
         double Y = hitData.getY();
@@ -43,6 +44,7 @@ public class AreaCheckerController {
         {
             isPointInArea = false;
         }
-        return new P4_HitData(X, Y, R, (System.nanoTime() - currentTime) / 1000000000d, System.currentTimeMillis(), isPointInArea);
+        int user_id = Integer.parseInt(session.getAttribute("Id").toString());
+        return new P4_HitData(X, Y, R, (System.nanoTime() - currentTime) / 1000000000d, System.currentTimeMillis(),user_id, isPointInArea);
     }
 }

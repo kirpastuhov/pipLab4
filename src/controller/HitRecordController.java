@@ -4,14 +4,15 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import ejb.Authentication;
 import ejb.HitDataRecord;
 import model.P4_HitData;
 
 import javax.ejb.EJB;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
@@ -22,11 +23,14 @@ public class HitRecordController {
     @EJB
     HitDataRecord hitDataRecord;
 
+    @EJB
+    Authentication authentication;
+
     @POST
     @Path("/add")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response addHitData(String content) throws IOException {
+    public Response addHitData(String content, @Context HttpServletRequest request) throws IOException {
 
         P4_HitData rawHitData = new P4_HitData();
         //decode from urlencoded string
@@ -45,8 +49,9 @@ public class HitRecordController {
         rawHitData.setY(Double.parseDouble(Y.toString()));
         rawHitData.setR(Double.parseDouble(R.toString()));
 
+        HttpSession session = request.getSession();
         AreaCheckerController areaCheckerController = new AreaCheckerController();
-        P4_HitData fullHitData =areaCheckerController.isPointInArea(rawHitData);
+        P4_HitData fullHitData = areaCheckerController.isPointInArea(rawHitData,session);
         Gson gson = new Gson();
         String jsonResponse = gson.toJson(fullHitData);
         hitDataRecord.addHitData(fullHitData);
@@ -54,9 +59,12 @@ public class HitRecordController {
         return Response.ok(jsonResponse).build();
 
     }
-    @POST
+    @GET
     @Path("/read")
-    public void readHitData(){
-
+    public Response readHitData(@Context HttpServletRequest request){
+        HttpSession session = request.getSession();
+        Gson gson = new Gson();
+        int user_id = Integer.parseInt(session.getAttribute("Id").toString());
+        return Response.ok().entity(gson.toJson(hitDataRecord.getHitData(user_id))).build();
     }
 }
