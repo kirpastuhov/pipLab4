@@ -19,7 +19,7 @@ function signIn() {
          },
          statusCode: {
              500: function () {
-                 $('.hide-block').html("User now found");
+                 $('.hide-block').html("User not found");
              }
          }
     });
