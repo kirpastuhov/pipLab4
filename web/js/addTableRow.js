@@ -1,4 +1,5 @@
 function addTableRow() {
+    $("#hits_table tr").remove();
     $.ajax({
         url: 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/read',
         method: "get",
@@ -6,7 +7,7 @@ function addTableRow() {
             let json = JSON.parse(response);
             if(response != null) {
                 for (let i = 0; i < json.length ; i++) {
-                    $("#hits_table").first().append("" +
+                    $("#hits_table").first().prepend("" +
                         "<tr>" +
                         "<td>" +
                             (i + 1) +
@@ -24,7 +25,7 @@ function addTableRow() {
                             json[i].isPointInArea +
                         "</td>" +
                         "<td>" +
-                            moment.unix(json[i].currentTime).format() +
+                            moment.unix(Math.round(json[i].currentTime/1000)).format("MMM Do YY") +
                         "</td>" +
                         "<td>" +
                             json[i].executionTime +
@@ -35,7 +36,4 @@ function addTableRow() {
             }
         }
     })
-
-
-
 }

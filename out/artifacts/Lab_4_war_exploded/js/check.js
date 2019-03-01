@@ -40,6 +40,7 @@ function sendHitData(X, Y, R) {
             content:  json
         }
     });
+    addTableRow();
 }
 async function sendRequest(chart_x, chart_y) {
     const chart_r = Number($("#inputR").val());
