@@ -25,7 +25,7 @@ function addTableRow() {
                             json[i].isPointInArea +
                         "</td>" +
                         "<td>" +
-                            moment.unix(Math.round(json[i].currentTime/1000)).format("MMM Do YY") +
+                            moment.unix(Math.round(json[i].currentTime/1000)).format("MMMM Do YYYY, h:mm:ss a") +
                         "</td>" +
                         "<td>" +
                             json[i].executionTime +
