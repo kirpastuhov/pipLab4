@@ -19,7 +19,7 @@ async function addPoint(chart_x, chart_y) {
     const draw_x = chart_x * 500 / 14 + 250;
     const draw_y = 250 - chart_y * 500 / 14;
     console.log(result);
-    drawGenericPoint(draw_x, draw_y, '#28A745');
+    // drawGenericPoint(draw_x, draw_y, '#28A745');
 }
 function sendHitData(X, Y, R) {
     let json = (String(JSON.stringify({
@@ -37,14 +37,24 @@ function sendHitData(X, Y, R) {
             // console.log(response.y);
             // console.log(response.r);
             // console.log(response.isPointInArea);
-            res = response.isPointInArea;
+            // res = response.isPointInArea;
+
+            addTableRow();
+            const draw_x = response.x * 500 / 14 + 250;
+            const draw_y = 250 - response.y * 500 / 14;
+            if (response.isPointInArea) {
+                color = "#28A745";
+            } else {
+                color = "#DC3545";
+            }
+            drawGenericPoint(draw_x, draw_y, color);
             return res
         },
         data: {
             content:  json
         }
     });
-    addTableRow();
+
 }
 async function sendRequest(chart_x, chart_y) {
     const chart_r = Number($("#inputR").val());
