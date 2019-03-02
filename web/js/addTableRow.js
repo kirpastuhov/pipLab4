@@ -1,5 +1,5 @@
 function addTableRow() {
-    // $("#hits_table tr").remove();
+    $("#hits_table tr").remove();
     $.ajax({
         url: 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/read',
         method: "get",

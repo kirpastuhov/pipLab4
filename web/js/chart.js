@@ -52,7 +52,7 @@ function drawHistory() {
             // console.log(+r.innerHTML)
             // console.log(r)
         } else {
-            if (res.innerHTML.includes("In area")) {
+            if (res.innerHTML.includes("true")) {
                 color = "#28A745";
             } else {
                 color = "#DC3545";
