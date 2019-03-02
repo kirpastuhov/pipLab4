@@ -27,7 +27,7 @@ function sendHitData(X, Y, R) {
         Y: Number(Y),
         R: Number(R),
     })));
-    var res;
+    let res;
     $.ajax({
         url: 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/add',
         type: "post",
