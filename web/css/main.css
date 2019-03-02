@@ -95,6 +95,14 @@ div.graph {
     margin: 5px;
     float:left;
 }
+table#data {
+    border-collapse: collapse;
+}
+table#data td, th{
+    border: 2px #dddddd;
+    padding: 5px;
+    text-align: center;
+}
 div.table {
     width: 300px;
     margin: 5px;
@@ -197,6 +205,7 @@ table#data td, th{
     margin-left: 30px;
 }
 .table{
+    width: 100px;
     margin-top: 20px;
     text-decoration-color: white;
 }

@@ -18,6 +18,7 @@ async function addPoint(chart_x, chart_y) {
     console.log(result);
     const draw_x = chart_x * 500 / 14 + 250;
     const draw_y = 250 - chart_y * 500 / 14;
+    console.log(result);
     drawGenericPoint(draw_x, draw_y, '#28A745');
 }
 function sendHitData(X, Y, R) {
@@ -26,15 +27,18 @@ function sendHitData(X, Y, R) {
         Y: Number(Y),
         R: Number(R),
     })));
+    var res;
     $.ajax({
         url: 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/add',
         type: "post",
         contentType: "application/json",
         success: function (response) {
-            console.log(response.x);
-            console.log(response.y);
-            console.log(response.r);
-            console.log(response.isPointInArea);
+            // console.log(response.x);
+            // console.log(response.y);
+            // console.log(response.r);
+            // console.log(response.isPointInArea);
+            res = response.isPointInArea;
+            return res
         },
         data: {
             content:  json
@@ -44,5 +48,6 @@ function sendHitData(X, Y, R) {
 }
 async function sendRequest(chart_x, chart_y) {
     const chart_r = Number($("#inputR").val());
-    sendHitData(chart_x, chart_y, chart_r)
+    var a =sendHitData(chart_x, chart_y, chart_r);
+    console.log(a);
 }

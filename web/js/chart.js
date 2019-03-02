@@ -15,6 +15,7 @@ function updateAndDraw() {
     $("#inputR").change(() => {
         updateRadiusValue();
         drawChart();
+        drawHistory();
     });
 
     updateRadiusValue();
@@ -29,6 +30,43 @@ function updateAndDraw() {
     $('#checkpoint').mousedown(() => false);
 
 }
+function drawHistory() {
+    // var currentR = getValue('R');
+    let _chart = $("#myCanvas");
+    let _size = Number(_chart.attr("width").replace("px", ""));
+    let color;
+    let currentR = Number(document.getElementById('inputR').value);
+    let dataX = $("td.dataX");
+    let dataY = $("td.dataY");
+    let dataR = $("td.dataR");
+    let dataRes = $("td.dataRes");
+    // console.log("here");
+    console.log(currentR);
+    for (let i = 0; i < dataX.length; i++) {
+        let x = dataX[i];
+        let y = dataY[i];
+        let r = dataR[i];
+        let res = dataRes[i];
+        if (+r.innerHTML !== currentR) {
+            color = "grey";
+            // console.log(+r.innerHTML)
+            // console.log(r)
+        } else {
+            if (res.innerHTML.includes("In area")) {
+                color = "#28A745";
+            } else {
+                color = "#DC3545";
+            }
+        }
+
+
+        const draw_x = parseFloat(x.innerHTML) * 500 / 14 + _size / 2;
+        const draw_y = _size / 2 - parseFloat(y.innerHTML) * 500 / 14;
+
+        drawGenericPoint(draw_x, draw_y, color);
+    }
+}
+
 
 function chartClick(e) {
     const x = e.pageX - _chart.offset().left;
