@@ -4,7 +4,6 @@ function drawChart() {
     drawAxisValues();
 }
 
-
 function drawAxis() {
     let _chart = $("#myCanvas");
     let _size = Number(_chart.attr("width").replace("px", ""));
@@ -20,7 +19,6 @@ function drawAxis() {
         width: _size,
         height: _size
     });
-
 
     _chart.drawLine({ // drawing OX
         strokeStyle: "#dddddd",
@@ -54,8 +52,6 @@ function drawAxis() {
         strokeWidth: 3,
         x1: center, y1: center + radius,
         x2: center - radius / 2, y2: center,
-        // x3: center, y3: center + radius,
-        // x4: center, y4: center
     });
 
     _chart.drawLine({ //drawing rect
@@ -94,7 +90,6 @@ function drawGenericLine(x1, y1, x2, y2, strokeStyle) {
     });
 }
 
-
 function drawAxisNames() {
     let _chart = $("#myCanvas");
     let _size = Number(_chart.attr("width").replace("px", ""));
@@ -112,18 +107,6 @@ function drawGenericText(text, x, y, size) {
         x: x, y: y
     });
 }
-
-// function drawGenericPoint(draw_x, draw_y, fillStyle) {
-//     let _chart = $("#myCanvas");
-//     console.log("drawing the point");
-//     _chart.drawEllipse({
-//         fillStyle: fillStyle,
-//         x: draw_x, y: draw_y,
-//         width: 5, height: 5
-//     });
-//     console.log("Done");
-// }
-
 function drawAxisValues() {
     let _chart = $("#myCanvas");
     let _size = Number(_chart.attr("width").replace("px", ""));

@@ -1,11 +1,11 @@
 function addTableRow() {
+    $("#hits_table td").remove();
     $.ajax({
         url: 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/read',
         method: "get",
         success: function (response) {
             let json = JSON.parse(response);
             if(response != null) {
-                $("#hits_table td").remove();
                 for (let i = 0; i < json.length ; i++) {
                     var tableRef = document.getElementById('hits_table').getElementsByTagName('tbody')[0];
                     // Insert a row in the table at row index 0
@@ -49,29 +49,20 @@ function addTableRow() {
 
                     var currenttimeCell  = newRow.insertCell(5);
 
-
                     // Append a text node to the cell
                     var newText  = document.createTextNode(moment.unix(Math.round(json[i].currentTime/1000)).format("DD.MM.YY, hh:mm:ss a"));
                     currenttimeCell.appendChild(newText);
 
                     var executionCell  = newRow.insertCell(6);
 
-
                     // Append a text node to the cell
                     var newText  = document.createTextNode(json[i].executionTime);
                     executionCell.appendChild(newText);
-
                 }
             }
-            addTableRow();
         }
     })
 }
-
-
-
-
-
 
 
 
