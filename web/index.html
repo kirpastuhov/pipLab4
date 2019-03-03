@@ -7,40 +7,38 @@
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="js/singIn.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
 </head>
-<div class='header' >
-    <h3>Saraev Vladislav | Kirill Pastuhov</h3>
-    <h3>P3218 v.19083</h3>
-</div>
- <div id="app">
+<body style="background-color: #3c3d3e">
+<div class='row'>
+    <div class="col-lg-6 col-md-10"  id="app">
+
+        <p>Saraev Vladislav | Kirill Pastuhov</p>
+        <p>P3218 v.19083</p>
         <p>Login</p>
         <form id="form" v-on:submit.prevent="addUser">
-            <input type="text" id="Login_S" v-model="newUser.name" placeholder="Login">
-            <input type="password" id="Password_S" v-model="newUser.email" placeholder="Password">
-            <input type="submit" value="Sign In" onclick="signIn()">
+            <input class="form-control" type="text" id="Login_S" v-model="newUser.name" placeholder="Login">
+            <br>
+            <input class="form-control " type="password" id="Password_S" v-model="newUser.email" placeholder="Password">
+            <br>
+            <ul class="errors">
+                <li v-show="!validation.name">Name cannot be empty.</li>
+                <li v-show="!validation.email">Password cannot be empty</li>
+            </ul>
+            <input type="submit" class="btn-submit sharp" style="border:1px solid #dddddd;" value="Sign In"
+                   onclick="signIn()">
         </form>
-        <ul class="errors">
-            <li v-show="!validation.name">Name cannot be empty.</li>
-            <li v-show="!validation.email">Password cannot be empty</li>
-        </ul>
-     <button onclick="location.href='register.html'">Registration</button>
- </div>
-<div class="hide-block">
+        <br>
+        <button class="btn-submit sharp" style="border:1px solid #dddddd;" onclick="location.href='register.html'">
+            Registration
+        </button>
+    </div>
+</div>
 </div>
 
-    <!--<div id="dots">-->
-        <!--<input id="X" type="text" v-model="newDot.x" placeholder="X"/> <br />-->
-        <!--<input id="Y" type="text"  v-model="newDot.y" placeholder="Y"><br />-->
-        <!--<input id="R" type="text" v-model="newDot.r" placeholder="R"/> <br />-->
-        <!--<input type="button" name="enter" value="Отправить точки" onclick="sendHitData()" />-->
-        <!--<ul class="errors">-->
-            <!--<li v-show="!validation.x">Incorrect X.</li>-->
-            <!--<li v-show="!validation.y">Incorrect Y.</li>-->
-            <!--<li v-show="!validation.r">Incorrect R.</li>-->
-        <!--</ul>-->
-    <!--</div>-->
-    <script src="js/app.js"></script>
-    </body>
-    </html>
+<script src="js/app.js"></script>
+</div>
+</body>
+</html>
 </body>
 </html>
