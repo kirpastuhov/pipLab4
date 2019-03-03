@@ -27,43 +27,6 @@
       <change beforePath="$PROJECT_DIR$/../Lab#2/web/javascript/drawChart.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab#2/web/javascript/drawChart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab#2/web/javascript/sendParams.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab#2/web/javascript/sendParams.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab#2/web/test.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab#2/web/test.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a3ca0fc3-90f8-4189-8aba-dea4577e1bf3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a3ca0fc3-90f8-4189-8aba-dea4577e1bf3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a3ca0fc3-90f8-4189-8aba-dea4577e1bf3/storage_v2/_src_/database/studs.ww2LBg/schema/s242093.TSmzGw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a3ca0fc3-90f8-4189-8aba-dea4577e1bf3/storage_v2/_src_/database/studs.ww2LBg/schema/s242093.TSmzGw.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/controller/AreaCheckerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/controller/AreaCheckerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/controller/HitRecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/controller/HitRecordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/controller/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/ejb/HitDataRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/ejb/HitDataRecord.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/ejb/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/ejb/Registration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/model/P4_HitData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/model/P4_HitData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/model/P4_User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/classes/model/P4_User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/js/check.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/js/check.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Lab_4_war_exploded/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ApplicationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/AreaCheckerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AreaCheckerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/HitRecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/HitRecordController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ejb/HitDataRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejb/HitDataRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ejb/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ejb/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/P4_HitData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/P4_HitData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/P4_User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/P4_User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/AreaCheckerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/HitRecordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/HitRecordController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ejb/HitDataRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ejb/HitDataRecord.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ejb/Registration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ejb/Registration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/P4_HitData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/P4_HitData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/P4_User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/P4_User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/addTableRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/addTableRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/js/check.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/js/check.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/main.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -761,12 +724,12 @@
       <workItem from="1551554979784" duration="122000" />
       <workItem from="1551555140095" duration="117000" />
       <workItem from="1551555300365" duration="8814000" />
-      <workItem from="1551633789502" duration="5013000" />
+      <workItem from="1551633789502" duration="5080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148358000" />
+    <option name="totallyTimeSpent" value="148425000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
