@@ -139,7 +139,6 @@ table#data {
     border-collapse: collapse;
 }
 table#data td, th{
-    color: #dddddd;
     border: 2px #dddddd;
     padding: 5px;
     text-align: center;
