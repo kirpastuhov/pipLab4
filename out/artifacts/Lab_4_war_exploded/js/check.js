@@ -1,14 +1,11 @@
 $(document).ready(() => {
     $("#checkpoint").unbind('click').click(() => {
-        console.log("check point button was pressed");
         submit();
     });
 });
 function submit() {
     const x = Number($("#inputX").val());
     const y = Number($("#inputY").val());
-    console.log(x);
-    console.log(y);
     if (!checkFields(y)) return;
     addPoint(x, y);
 }
@@ -48,6 +45,5 @@ function sendHitData(X, Y, R) {
 }
 async function sendRequest(chart_x, chart_y) {
     const chart_r = Number($("#inputR").val());
-    let a =sendHitData(chart_x, chart_y, chart_r);
-    console.log(a);
+    let a = sendHitData(chart_x, chart_y, chart_r);
 }

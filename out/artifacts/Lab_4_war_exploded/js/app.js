@@ -63,7 +63,7 @@ let register = new Vue({
             }
         },
         isValid: function () {
-            var validation = this.validation
+            let validation = this.validation
             return Object.keys(validation).every(function (key) {
                 return validation[key]
             })
@@ -101,7 +101,7 @@ let dots = new Vue({
             }
         },
         isValid: function () {
-            var validation = this.validation
+            let validation = this.validation
             return Object.keys(validation).every(function (key) {
                 return validation[key]
             })
@@ -110,11 +110,7 @@ let dots = new Vue({
     // methods
     methods: {
         addUser: function () {
-            if (this.isValid) {
-                // usersRef.push(this.newUser)
-                console.log(this.newDot.x);
-                console.log(this.newDot.y);
-                console.log(this.newDot.r);
+            if (this.isValid) {;
             }
         }
     }
