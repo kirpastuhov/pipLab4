@@ -17,9 +17,13 @@
     <script src="js/chart.js"></script>
     <script src="js/drawPoint.js"></script>
     <script src="js/addTableRow.js"></script>
+    <script src="js/restoreHitHistory.js"></script>
 </head>
 <body>
-<script>addTableRow()</script>
+<script>
+    addTableRow()
+    restoreHitHistory()
+</script>
 <div class="row">
     <div id="canvas">
         <canvas id="myCanvas" width="500" height="500"
@@ -55,14 +59,14 @@
                     Check the point</a>
             </div>
         </form>
-        <table class="table" id="hits_table">
+        <table class="table" id="hits_table"style="color: #dddddd">
             <thead>
             <tr>
                 <th id="number_table">#</th>
                 <th id="X_table">X</th>
                 <th id="Y_table">Y</th>
                 <th id="R_table">R</th>
-                <th id="IsInArea_table">Is in area?</th>
+                <th id="IsInArea_table">Hit</th>
                 <th id="CurrTime_table">Current time</th>
                 <th id="ExecTime_table">Execution time</th>
             </tr>

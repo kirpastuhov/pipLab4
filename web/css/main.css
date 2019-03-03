@@ -171,7 +171,7 @@ table#data td, th{
 #canvas
 {
     width: 43%;
-    margin-left: 30px;
+    margin-left: 40px;
     margin-top: 30px;
     position: relative;
 }
@@ -202,10 +202,10 @@ table#data td, th{
     margin-left: 25px;
 }
 .col-lg-6{
-    margin-left: 30px;
+    margin-left: 40px;
 }
 .table{
     width: 600px;
     margin-top: 20px;
-    text-decoration-color: white;
+    margin-left: 20px;
 }
