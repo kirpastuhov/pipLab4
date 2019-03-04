@@ -5,14 +5,29 @@ function restoreHitHistory() {
         success: function (response) {
             _chart = $('#myCanvas');
             let json = JSON.parse(response);
-            if(response != null) {
-                for (let i = 0; i < json.length ; i++) {
-                     drawGenericPoint(
-                         json[i].x * 500 / 14 + 250,
-                         250 - json[i].y * 500 / 14,
-                         "orange"
-                     );
-                     console.log(json[i].x)
+            let currentR = Number(document.getElementById('inputR').value);
+            let _size = Number(_chart.attr("width").replace("px", ""));
+            _radius = Number($("#inputR").val());
+            if (response != null) {
+                for (let i = 0; i < json.length; i++) {
+                    let x = json[i].x;
+                    let y = json[i].y;
+                    let r = json[i].r;
+                    let res = json[i].isPointInArea;
+                    if (r!== currentR) {
+                        color = "grey";
+                    } else {
+                        if (res) {
+                            color = "#28A745";
+                        } else {
+                            color = "#DC3545";
+                        }
+                    }
+
+                    const draw_x = parseFloat(x) * 500 / 14 + _size / 2;
+                    const draw_y = _size / 2 - parseFloat(y)* 500 / 14;
+
+                    drawGenericPoint(draw_x, draw_y, color);
                 }
             }
         }
