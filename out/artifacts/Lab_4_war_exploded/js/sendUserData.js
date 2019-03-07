@@ -6,14 +6,14 @@ function sendUserData() {
         Login: Login
     })));
     $.ajax({
-        url: 'http://localhost:8080/Lab_4_war_exploded/web/registration',
+        url: 'http://localhost:56645/Lab4_war/web/registration',
         type: "post",
         contentType: "application/json",
         data: {
             content:  json
         },
         success:function () {
-            location.href = 'http://localhost:8080/Lab_4_war_exploded/main.html'
+            location.href = 'http://localhost:56645/Lab4_war/main.html'
         },
         statusCode: {
             500: function () {

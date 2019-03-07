@@ -1,7 +1,7 @@
 function addTableRow() {
     $("#hits_table td").remove();
     $.ajax({
-        url: 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/read',
+        url: 'http://localhost:56645/Lab4_war/web/hitdata/read',
         method: "get",
         success: function (response) {
             let json = JSON.parse(response);
@@ -25,7 +25,7 @@ function addTableRow() {
                             json[i].isPointInArea +
                         "</td>" +
                         "<td>" +
-                            moment.unix(Math.round(json[i].currentTime/1000)).format("MMMM Do YYYY, h:mm:ss a") +
+                            moment.unix(Math.round(json[i].currentTime/1000)).format("DD.MM.YYYY, h:mm:ss a") +
                         "</td>" +
                         "<td>" +
                             json[i].executionTime +
