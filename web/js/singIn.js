@@ -7,14 +7,14 @@ function signIn() {
     })));
     console.log(json);
     $.ajax({
-        url: 'http://localhost:56645/Lab4_war/web/sign/in',
+        url: 'http://localhost:7857/Lab4_war/web/sign/in',
         type: "post",
         contentType: "application/json",
         data: {
             content:  json
         },
          success:function () {
-            location.href = 'http://localhost:56645/Lab4_war/main.html'
+            location.href = 'http://localhost:7857/Lab4_war/main.html'
 
          },
          statusCode: {

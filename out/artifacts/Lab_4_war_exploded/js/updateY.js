@@ -11,7 +11,7 @@ function updateY() {
 
     if (check === prevValue) {
         return;
-    }
+    }6746
 
     $y.toggleClass("is-invalid");
     $y.toggleClass("is-valid");

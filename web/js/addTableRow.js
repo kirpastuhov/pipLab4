@@ -1,7 +1,7 @@
 function addTableRow() {
     $("#hits_table td").remove();
     $.ajax({
-        url: 'http://localhost:56645/Lab4_war/web/hitdata/read',
+        url: 'http://localhost:7857/Lab4_war/web/hitdata/read',
         method: "get",
         success: function (response) {
             let json = JSON.parse(response);

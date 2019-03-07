@@ -1,7 +1,7 @@
 function addTableRow() {
     $("#hits_table td").remove();
     $.ajax({
-        url: 'http://localhost:56645/Lab4_war/web/hitdata/read',
+        url: 'http://localhost:7857/Lab4_war/web/hitdata/read',
         method: "get",
         success: function (response) {
             let json = JSON.parse(response);
@@ -12,16 +12,16 @@ function addTableRow() {
                         "<td>" +
                             (i + 1) +
                         "</td>" +
-                        "<td>" +
+                        "<td class='dataX'>" +
                             json[i].x +
                         "</td>" +
-                        "<td>" +
+                        "<td class='dataY'>" +
                             json[i].y +
                         "</td>" +
-                        "<td>" +
+                        "<td class='dataR'>" +
                             json[i].r +
                         "</td>" +
-                        "<td>" +
+                        "<td class='dataRes'>" +
                             json[i].isPointInArea +
                         "</td>" +
                         "<td>" +

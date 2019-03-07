@@ -22,7 +22,7 @@ function sendHitData(X, Y, R) {
     })));
     let res;
     $.ajax({
-        url: 'http://localhost:56645/Lab4_war/web/hitdata/add',
+        url: 'http://localhost:7857/Lab4_war/web/hitdata/add',
         type: "post",
         contentType: "application/json",
         success: function (response) {
@@ -45,5 +45,5 @@ function sendHitData(X, Y, R) {
 }
 async function sendRequest(chart_x, chart_y) {
     const chart_r = Number($("#inputR").val());
-    let a = sendHitData(chart_x, chart_y, chart_r);
+    sendHitData(chart_x, chart_y, chart_r);
 }
