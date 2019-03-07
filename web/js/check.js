@@ -45,5 +45,5 @@ function sendHitData(X, Y, R) {
 }
 async function sendRequest(chart_x, chart_y) {
     const chart_r = Number($("#inputR").val());
-    let a = sendHitData(chart_x, chart_y, chart_r);
+    sendHitData(chart_x, chart_y, chart_r);
 }

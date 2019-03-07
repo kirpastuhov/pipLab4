@@ -12,16 +12,16 @@ function addTableRow() {
                         "<td>" +
                             (i + 1) +
                         "</td>" +
-                        "<td>" +
+                        "<td class='dataX'>" +
                             json[i].x +
                         "</td>" +
-                        "<td>" +
+                        "<td class='dataY'>" +
                             json[i].y +
                         "</td>" +
-                        "<td>" +
+                        "<td class='dataR'>" +
                             json[i].r +
                         "</td>" +
-                        "<td>" +
+                        "<td class='dataRes'>" +
                             json[i].isPointInArea +
                         "</td>" +
                         "<td>" +

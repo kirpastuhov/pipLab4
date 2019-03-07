@@ -1,13 +1,6 @@
 let emailRE = /./;
 let dotsRE = /(\d+(\.\d+)?)/;
 
-// Setup Firebase
-let config = {
-    apiKey: "AIzaSyAi_yuJciPXLFr_PYPeU3eTvtXf8jbJ8zw",
-    authDomain: "vue-demo-537e6.firebaseapp.com",
-    databaseURL: "https://vue-demo-537e6.firebaseio.com"
-}
-// firebase.initializeApp(config);
 
 // create Vue app
 let app = new Vue({
@@ -110,7 +103,7 @@ let dots = new Vue({
     // methods
     methods: {
         addUser: function () {
-            if (this.isValid) {;
+            if (this.isValid) {
             }
         }
     }
