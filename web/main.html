@@ -18,6 +18,7 @@
     <script src="js/drawPoint.js"></script>
     <script src="js/addTableRow.js"></script>
     <script src="js/restoreHitHistory.js"></script>
+    <script src="js/sendUserData.js"></script>
 </head>
 <body>
 <script>
@@ -57,6 +58,7 @@
             <div style="text-align: center" class="disable-selection">
                 <a href="javascript:void(0)" class="btn-submit sharp" style="border:1px solid #dddddd;" id="checkpoint">
                     Check the point</a>
+                <button class="btn-submit sharp" onclick="quit()" style="border:1px solid #dddddd;">Quit</button>
             </div>
         </form>
         <table class="table" id="hits_table" style="color: #dddddd">
@@ -71,8 +73,6 @@
                 <th id="ExecTime_table">Execution time</th>
             </tr>
             </thead>
-            <tbody id="tbody">
-            </tbody>
         </table>
     </div>
 </div>

@@ -6,14 +6,14 @@ function sendUserData() {
         Login: Login
     })));
     $.ajax({
-        url: 'http://localhost:7857/Lab4_war/web/registration',
+        url: 'http://localhost:5635/Lab4_war/web/registration',
         type: "post",
         contentType: "application/json",
         data: {
             content:  json
         },
         success:function () {
-            location.href = 'http://localhost:7857/Lab4_war/main.html'
+            location.href = 'http://localhost:5635/Lab4_war/main.html'
         },
         statusCode: {
             500: function () {
@@ -21,4 +21,15 @@ function sendUserData() {
             }
         }
     });
+}
+function quit() {
+    $.ajax({
+        url: 'http://localhost:5635/Lab4_war/web/sign/out',
+        type: "post",
+        contentType: "application/json",
+        success:function () {
+            location.href = 'http://localhost:5635/Lab4_war/index.html'
+        }
+    });
+
 }

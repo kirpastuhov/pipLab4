@@ -9,6 +9,7 @@ import ejb.HitDataRecord;
 import ejb.UserRecord;
 import model.P4_HitData;
 import util.Encryptor;
+
 import javax.ejb.EJB;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -68,12 +69,20 @@ public class AuthenticationController {
         }
         return  Response.status(500).build();
     }
-
+    @POST
     @Path("/out")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response signOut(){
-
+    public Response signOut(String content, @Context HttpServletRequest request){
+        try {
+            HttpSession session = request.getSession();
+            session.removeAttribute("login");
+            session.removeAttribute("Id");
+            Response.ok().build();
+        }
+        catch (Exception e){
+            Response.status(500).build();
+        }
         return Response.ok().build();
     }
 }
