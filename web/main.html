@@ -18,7 +18,6 @@
     <script src="js/drawPoint.js"></script>
     <script src="js/addTableRow.js"></script>
     <script src="js/restoreHitHistory.js"></script>
-    <script src="js/sendUserData.js"></script>
 </head>
 <body>
 <script>
@@ -77,5 +76,20 @@
     </div>
 </div>
 <script src="js/main.js"></script>
+<script>
+    function quit() {
+        $.ajax({
+            // url: 'http://localhost:5635/Lab4_war/web/sign/out',
+            url : 'http://localhost:8080/Lab_4_war_exploded/web/sign/out',
+            type: "post",
+            contentType: "application/json",
+            success:function () {
+                // location.href = 'http://localhost:5635/Lab4_war/index.html'
+                location.href = 'http://localhost:8080/Lab_4_war_exploded/index.html'
+            }
+        });
+
+    }
+</script>
 </body>
 </html>

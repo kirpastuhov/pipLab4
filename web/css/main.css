@@ -144,7 +144,7 @@ table#data td, th{
     padding: 5px;
     text-align: center;
 }
-#app{
+#app, #registration, #sign_in{
     width: 50%; margin: 0 auto;
     text-align: center;
     color: #dddddd;
