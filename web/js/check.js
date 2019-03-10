@@ -7,13 +7,9 @@ function submit() {
     const x = Number($("#inputX").val());
     const y = Number($("#inputY").val());
     if (!checkFields(y)) return;
-    addPoint(x, y);
+    sendRequest(x, y);
 }
-async function addPoint(chart_x, chart_y) {
-    const result = await sendRequest(chart_x, chart_y);
-    const draw_x = chart_x * 500 / 14 + 250;
-    const draw_y = 250 - chart_y * 500 / 14;
-}
+
 function sendHitData(X, Y, R) {
     let json = (String(JSON.stringify({
         X: Number(X),
