@@ -1,7 +1,7 @@
 function restoreHitHistory() {
     $.ajax({
-        // url: 'http://localhost:5635/Lab4_war/web/hitdata/read',
-        url : 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/read',
+        url: 'http://localhost:1568/Lab4_war/web/hitdata/read',
+        // url : 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/read',
         method: "get",
         success: function (response) {
             _chart = $('#myCanvas');

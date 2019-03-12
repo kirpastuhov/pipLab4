@@ -68,32 +68,32 @@
         methods: {
             loginUser() {
 
-                    let Login = $('#Login_S').val();
-                    let Password = $('#Password_S').val();
-                    let json = (String(JSON.stringify({
-                        Password: Password,
-                        Login: Login
-                    })));
-                    console.log(json);
-                    $.ajax({
-                        // url: 'http://localhost:5635/Lab4_war/web/sign/in',
-                        url: 'http://localhost:8080/Lab_4_war_exploded/web/sign/in',
-                        type: "post",
-                        contentType: "application/json",
-                        data: {
-                            content: json
-                        },
-                        success: function () {
-                            // location.href = 'http://localhost:5635/Lab4_war/main.html'
-                            location.href = 'http://localhost:8080/Lab_4_war_exploded/main.html'
-                        },
-                        statusCode: {
-                            500: function () {
-                                $('.hide-block').html("User not found");
-                            }
+                let Login = $('#Login_S').val();
+                let Password = $('#Password_S').val();
+                let json = (String(JSON.stringify({
+                    Password: Password,
+                    Login: Login
+                })));
+                console.log(json);
+                $.ajax({
+                    url: 'http://localhost:1568/Lab4_war/web/sign/in',
+                    // url: 'http://localhost:8080/Lab_4_war_exploded/web/sign/in',
+                    type: "post",
+                    contentType: "application/json",
+                    data: {
+                        content: json
+                    },
+                    success: function () {
+                        location.href = 'http://localhost:1568/Lab4_war/main.html'
+                        // location.href = 'http://localhost:8080/Lab_4_war_exploded/main.html'
+                    },
+                    statusCode: {
+                        500: function () {
+                            $('.hide-block').html("User not found");
                         }
+                    }
 
-                    });
+                });
 
             },
             addUser: function () {
@@ -107,7 +107,5 @@
     });
 </script>
 </div>
-</body>
-</html>
 </body>
 </html>
