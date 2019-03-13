@@ -18,7 +18,6 @@
     <script src="js/drawPoint.js"></script>
     <script src="js/addTableRow.js"></script>
     <script src="js/restoreHitHistory.js"></script>
-    <script src="js/sendUserData.js"></script>
 </head>
 <body>
 <script>
@@ -76,6 +75,45 @@
         </table>
     </div>
 </div>
-<script src="js/main.js"></script>
+<script>
+    function quit() {
+        location.reload();
+        $.ajax({
+            //url: 'http://localhost:8968/Lab4_war/web/sign/out',
+             url : 'http://localhost:8080/Lab_4_war_exploded/web/sign/out',
+            type: "post",
+            contentType: "application/json",
+            success:function () {
+               // location.href = 'http://localhost:8968/Lab4_war/index.html'
+                 location.href = 'http://localhost:8080/Lab_4_war_exploded/index.html'
+            }
+        });
+
+    }
+    new Vue({
+        el: '#R',
+        data: function(){
+            return {
+                R : null,
+                Rs: [
+                    '1','2','3', '4', '5'
+                ],
+
+            }
+        }
+    })
+    new Vue({
+        el: '#X',
+        data: function(){
+            return {
+                X : null,
+                Xs: [
+                    '-5','-4','-3','-2','-1','0','1','2','3'
+                ],
+
+            }
+        }
+    })
+</script>
 </body>
 </html>

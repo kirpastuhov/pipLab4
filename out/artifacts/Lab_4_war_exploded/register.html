@@ -5,13 +5,12 @@
     <title>Register</title>
     <script src="https://unpkg.com/vue"></script>
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-    <script src="js/sendUserData.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
 <div class="row" id="register">
-    <div class="col-lg-6 col-md-10" id="app">
+    <div class="col-lg-6 col-md-10" id="registration">
         <p>Register User</p>
         <input class="form-control" type="text" id="Login" v-model="newUser.name" placeholder="Login">
         <br>
@@ -22,9 +21,69 @@
             <li v-show="!validation.email">Password cannot be empty</li>
         </ul>
 
-        <input type="button" name="enter" class="btn-submit sharp" style="border:1px solid #dddddd;" value="Register" onclick="sendUserData()"/>
+        <input type="submit" name="enter" class="btn-submit sharp" style="border:1px solid #dddddd;" value="Register" v-on:click="sendUserData"/>
     </div>
 </div>
 <div class="hide-block"></div>
+<script>
+    let passwordRE = /./;
+
+    // create Vue app
+    let app = new Vue({
+        // element to mount to
+        el: '#registration',
+        // initial data
+        data: {
+            newUser: {
+                login: '',
+                password: ''
+            }
+        },
+        computed: {
+            validation: function () {
+                return {
+                    login: !!this.newUser.login.trim(),
+                    password: passwordRE.test(this.newUser.password)
+                }
+            },
+            isValid: function () {
+                var validation = this.validation
+                return Object.keys(validation).every(function (key) {
+                    return validation[key]
+                })
+            }
+        },
+        // methods
+        methods: {
+            sendUserData() {
+                let Login = $('#Login').val();
+                let Password = $('#Password').val();
+                let json = (String(JSON.stringify({
+                    Password: Password,
+                    Login: Login
+                })));
+                $.ajax({
+                    //url: 'http://localhost:8968/Lab4_war/web/registration',
+                     url : 'http://localhost:8080/Lab_4_war_exploded/web/registration',
+                    type: "post",
+                    contentType: "application/json",
+                    data: {
+                        content:  json
+                    },
+                    success:function () {
+                        //location.href = 'http://localhost:8968/Lab4_war/main.html'
+                        location.href = 'http://localhost:8080/Lab4_war_exploded/main.html'
+                    },
+                    statusCode: {
+                        500: function () {
+                            $('.hide-block').html("Произошел троллинг, такой логин уже занят.");
+                        }
+                    }
+                });
+            },
+        }
+    });
+
+</script>
 </body>
 </html>

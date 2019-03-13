@@ -43,6 +43,6 @@ function chartClick(e) {
     console.log("x2 = ", chart_x);
     console.log("y2 = ", chart_y);
 
-    addPoint(chart_x, chart_y);
+    sendRequest(chart_x, chart_y);
 }
 

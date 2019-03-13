@@ -76,7 +76,7 @@
                 })));
                 console.log(json);
                 $.ajax({
-                    url: 'http://localhost:8968/Lab4_war/web/sign/in',
+                     url: 'http://localhost:8968/Lab4_war/web/sign/in',
                     // url: 'http://localhost:8080/Lab_4_war_exploded/web/sign/in',
                     type: "post",
                     contentType: "application/json",
@@ -85,7 +85,7 @@
                     },
                     success: function () {
                         location.href = 'http://localhost:8968/Lab4_war/main.html'
-                        // location.href = 'http://localhost:8080/Lab_4_war_exploded/main.html'
+                       //  location.href = 'http://localhost:8080/Lab_4_war_exploded/main.html'
                     },
                     statusCode: {
                         500: function () {
