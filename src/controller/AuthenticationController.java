@@ -49,7 +49,7 @@ public class AuthenticationController {
 /*
    @POST это мы указывает метод HTTP, что очевидно лол
    @Path("/in") - указываем путь для метода класса, таким образом чтобы получить
-   доступ у методу Response класса AuthenticationController нам в пути нужно прописать
+   доступ у методу signIn класса AuthenticationController нам в пути нужно прописать
    www.pornhub.com/sign/in
    А так же, есть пути с параметрами они указывают так @Path("/in/{parameter}")
    параметры это допутим id юзера, параметров может быть много и чтоб их заюзать, метод
