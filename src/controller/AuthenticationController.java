@@ -28,7 +28,8 @@ import java.util.List;
 public class AuthenticationController {
 
 /*
-    с помощью аннотации @EJB мы реализуем Dependency Injection (DI)
+    с помощью аннотации @EJB (не только с помощью ее реализуется DI,там оч много всего на самом деле)
+     мы реализуем Dependency Injection (DI)
     таким образом нам не нужно писать что-то
     вроде Authentication authentication = new Authentication();
     Если ты не понял почему бы просто не создать экземпляр по старинке, то
