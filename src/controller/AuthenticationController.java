@@ -20,16 +20,23 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
+//кусок пути к контроллеру, что-то типа имени,но для браузера
 @Path("/sign")
 public class AuthenticationController {
 
-    @Context
-    UriInfo uriInfo;
-
+/*
+    с помощью аннотации @EJB мы реализуем Dependency Injection (DI)
+    таким образом нам не нужно писать что-то
+    вроде Authentication authentication = new Authentication();
+    Если ты не понял почему бы просто не создать экземпляр по старинке, то
+    то там можно, НО это будет тупо и в некоторых сложных ситациях DI оч классная штука (например если твой EJB синглтон,
+    просто так ты его не вызовешь, но зато отсосешь)
+    Кароче компонентом, который мы добавили с помощью DI нам не не нужно управлять, за нас
+    это делает контейнер.
+ */
     @EJB
     Authentication authentication;
 
@@ -38,7 +45,28 @@ public class AuthenticationController {
 
     @EJB
     UserRecord userRecord;
+/*
+   @POST это мы указывает метод HTTP, что очевидно лол
+   @Path("/in") - указываем путь для метода класса, таким образом чтобы получить
+   доступ у методу Response класса AuthenticationController нам в пути нужно прописать
+   www.pornhub.com/sign/in
+   А так же, есть пути с параметрами они указывают так @Path("/in/{parameter}")
+   параметры это допутим id юзера, параметров может быть много и чтоб их заюзать, метод
+   дожен быть оформлен так
 
+    @Path("/id/{userId}")
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response addNewPoint(@PathParam(value = "userId",String content) int userId){ ... }
+
+    @Consumes(MediaType.APPLICATION_JSON) - то, что принимает метод (от клиента), в данном случае он принимет JSON
+    @Produces(MediaType.APPLICATION_JSON) - то, что возвращает метод (обратно на клиент), тут тоже JSON
+
+    есть много MediaType'ов text/plain, text/html итд итп
+
+
+     @Context HttpServletRequest request - контекст сервлета, чтоб можно было достать сессию, редиректить итд итп
+*/
     @POST
     @Path("/in")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -75,15 +103,16 @@ public class AuthenticationController {
     @Produces(MediaType.APPLICATION_JSON)
     public Response signOut(String content, @Context HttpServletRequest request){
         try {
+            //удаляем сессию
+            // сначала ты ее, а потом она тебя, какая ирония........
             HttpSession session = request.getSession();
             session.removeAttribute("login");
             session.removeAttribute("Id");
-            Response.ok().build();
+            return Response.ok().build();
         }
         catch (Exception e){
-            Response.status(500).build();
+            return Response.status(500).build();
         }
-        return Response.ok().build();
     }
 }
 
