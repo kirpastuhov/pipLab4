@@ -10,8 +10,7 @@
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="create"/>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <!--<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://pg:5432/studs"/>-->
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:9999/studs"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://pg:5432/studs"/>
             <property name="javax.persistence.jdbc.user" value="s244554"/>
             <property name="javax.persistence.jdbc.password" value="mtr923"/>
         </properties>
@@ -23,8 +22,7 @@
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="create"/>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
-            <!--<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://pg:5432/studs"/>-->
-            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:9999/studs"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://pg:5432/studs"/>
             <property name="javax.persistence.jdbc.user" value="s244554"/>
             <property name="javax.persistence.jdbc.password" value="mtr923"/>
         </properties>

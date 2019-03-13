@@ -1,6 +1,6 @@
 function restoreHitHistory() {
     $.ajax({
-       url: 'http://localhost:8968/Lab4_war/web/hitdata/read',
+       url: 'http://localhost:1314/Lab4_war/web/hitdata/read',
         // url : 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/read',
         method: "get",
         success: function (response) {
@@ -30,6 +30,11 @@ function restoreHitHistory() {
 
                     drawGenericPoint(draw_x, draw_y, color);
                 }
+            }
+        },
+        statusCode: {
+            500: function () {
+                location.href = 'http://localhost:1314/Lab4_war/error.html'
             }
         }
     })

@@ -77,15 +77,14 @@
 </div>
 <script>
     function quit() {
-        location.reload();
         $.ajax({
-            //url: 'http://localhost:8968/Lab4_war/web/sign/out',
-             url : 'http://localhost:8080/Lab_4_war_exploded/web/sign/out',
+            url: 'http://localhost:1314/Lab4_war/web/sign/out',
+            // url : 'http://localhost:8080/Lab_4_war_exploded/web/sign/out',
             type: "post",
             contentType: "application/json",
             success:function () {
-               // location.href = 'http://localhost:8968/Lab4_war/index.html'
-                 location.href = 'http://localhost:8080/Lab_4_war_exploded/index.html'
+                location.href = 'http://localhost:1314/Lab4_war/index.html'
+               //  location.href = 'http://localhost:8080/Lab_4_war_exploded/index.html'
             }
         });
 

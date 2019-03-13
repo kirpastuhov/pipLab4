@@ -16,7 +16,7 @@ public class Registration {
         query.setParameter("login", user.getLogin());
         try {
             query.getSingleResult();
-            return 500;
+            return 412;
         }
         catch (Exception e){
             em.getTransaction().begin();

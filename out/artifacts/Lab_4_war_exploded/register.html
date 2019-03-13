@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
@@ -47,7 +47,7 @@
                 }
             },
             isValid: function () {
-                var validation = this.validation
+                let validation = this.validation;
                 return Object.keys(validation).every(function (key) {
                     return validation[key]
                 })
@@ -63,19 +63,19 @@
                     Login: Login
                 })));
                 $.ajax({
-                    //url: 'http://localhost:8968/Lab4_war/web/registration',
-                     url : 'http://localhost:8080/Lab_4_war_exploded/web/registration',
+                    url: 'http://localhost:1314/Lab4_war/web/registration',
+                    // url : 'http://localhost:8080/Lab_4_war_exploded/web/registration',
                     type: "post",
                     contentType: "application/json",
                     data: {
                         content:  json
                     },
                     success:function () {
-                        //location.href = 'http://localhost:8968/Lab4_war/main.html'
-                        location.href = 'http://localhost:8080/Lab4_war_exploded/main.html'
+                        location.href = 'http://localhost:1314/Lab4_war/main.html'
+                        //location.href = 'http://localhost:8080/Lab4_war_exploded/main.html'
                     },
                     statusCode: {
-                        500: function () {
+                        412: function () {
                             $('.hide-block').html("Произошел троллинг, такой логин уже занят.");
                         }
                     }
@@ -83,7 +83,6 @@
             },
         }
     });
-
 </script>
 </body>
 </html>
