@@ -1,7 +1,8 @@
 function restoreHitHistory() {
     $.ajax({
-       url: 'http://localhost:1314/Lab4_war/web/hitdata/read',
-        // url : 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/read',
+     //  url: 'http://localhost:1314/Lab4_war/web/hitdata/read',
+         url : 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/read',
+        //url : 'http://localhost:3080/Lab_4_war/web/hitdata/read',
         method: "get",
         success: function (response) {
             _chart = $('#myCanvas');
@@ -34,7 +35,9 @@ function restoreHitHistory() {
         },
         statusCode: {
             500: function () {
-                location.href = 'http://localhost:1314/Lab4_war/error.html'
+               // location.href = 'http://localhost:1314/Lab4_war/error.html'
+               //  location.href = 'http://localhost:3080/Lab4_war/error.html'
+                location.href = 'http://localhost:8080_exploded/Lab4_war/error.html'
             }
         }
     })

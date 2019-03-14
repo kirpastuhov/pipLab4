@@ -62,7 +62,6 @@ ul {
     padding: 0;
     margin-top: 15px;
     margin-right: 15px;
-
 }
 
 div.borderedDiv {
@@ -101,12 +100,11 @@ table#data {
 }
 table#data td, th{
     border: 2px #dddddd;
-    padding: 5px;
+    padding: 1px;
     text-align: center;
 }
 div.table {
-    width: 300px;
-    margin: 5px;
+    /*width: 300px;*/
     float:left;
 }
 div.input {
@@ -174,9 +172,9 @@ table#data td, th{
 #canvas
 {
     width: 43%;
-    margin-left: 40px;
+    /*margin-left: 10px;*/
     margin-top: 30px;
-    position: relative;
+
 }
 
 .sharp {
@@ -207,9 +205,25 @@ table#data td, th{
 .col-lg-6{
     margin-left: 40px;
 }
-.table{
+.portal{
     width: 600px;
     margin-top: 20px;
-    margin-left: 20px;
+    margin-left: 25px;
+    display: inline-block;
+    vertical-align: top;
 }
-
+.test{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+/*.table{*/
+    /*width: 400px;*/
+/*}*/
+#myCanvas{
+    width: 500px;
+    height: 500px;
+}
+#canvas{
+    display: inline-block;
+}

@@ -19,12 +19,11 @@
     <script src="js/addTableRow.js"></script>
     <script src="js/restoreHitHistory.js"></script>
 </head>
-<body>
 <script>
     addTableRow();
     restoreHitHistory();
 </script>
-<div class="row">
+<div class="test">
     <div id="canvas">
         <canvas id="myCanvas" width="500" height="500"
                 style="border:1px solid #dddddd; background-color: rgba(75, 76, 77,0.7);">
@@ -32,10 +31,10 @@
                 for the Canvas API.</p>
         </canvas>
     </div>
-    <div class="col-lg-6 col-md-10">
+    <div class="portal">
         <form action="control" method="POST" onsubmit="return false;" id="form">
             <div class="row disable-selection">
-                  <div id="X" class="form-group col-sm" style="text-align: center">
+                <div id="X" class="form-group col-sm" style="text-align: center">
                     <label>X</label>
                     <select v-model="inputX" name="X" id="inputX" class="form-control" >
                         <option v-for="X in Xs" :value="X">{{ X }}</option>
@@ -63,7 +62,6 @@
         <table class="table" id="hits_table" style="color: #dddddd">
             <thead>
             <tr>
-                <th id="number_table">#</th>
                 <th id="X_table">X</th>
                 <th id="Y_table">Y</th>
                 <th id="R_table">R</th>
@@ -78,16 +76,15 @@
 <script>
     function quit() {
         $.ajax({
-            url: 'http://localhost:1314/Lab4_war/web/sign/out',
+             url: 'http://localhost:3080/Lab4_war/web/sign/out',
             // url : 'http://localhost:8080/Lab_4_war_exploded/web/sign/out',
             type: "post",
             contentType: "application/json",
             success:function () {
-                location.href = 'http://localhost:1314/Lab4_war/index.html'
-               //  location.href = 'http://localhost:8080/Lab_4_war_exploded/index.html'
+                location.href = 'http://localhost:3080/Lab4_war/index.html'
+                //  location.href = 'http://localhost:8080/Lab_4_war_exploded/index.html'
             }
         });
-
     }
     new Vue({
         el: '#R',
@@ -97,7 +94,6 @@
                 Rs: [
                     '1','2','3', '4', '5'
                 ],
-
             }
         }
     })
@@ -109,7 +105,6 @@
                 Xs: [
                     '-5','-4','-3','-2','-1','0','1','2','3'
                 ],
-
             }
         }
     })
