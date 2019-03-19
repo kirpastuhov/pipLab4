@@ -1,22 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
 html, body {
+    min-width: 531px;
     color: #dddddd;
     font-size: 16px;
     background-color: #3c3d3e;
-}
-.grey{
-    background: grey;
-}
-.yellow{
-    background: yellow;
-}
-.pink{
-    background: pink;
-}
-.blue{
-    background: blue;
-}
-body {
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 ul {
@@ -48,21 +37,21 @@ ul {
     color: #dc2a2f;
 }
 
-.row{
-    width: 100%;
-    padding-right: 0;
-}
-.col-sm
-{
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    display: inline-block;
-    width: 100%;
-    padding: 0;
-    margin-top: 15px;
-    margin-right: 15px;
-}
+/*.row{*/
+    /*width: 100%;*/
+    /*padding-right: 0;*/
+/*}*/
+/*!*.col-sm*!*/
+/*{*/
+    /*align-items: center;*/
+    /*align-content: center;*/
+    /*text-align: center;*/
+    /*display: inline-block;*/
+    /*width: 100%;*/
+    /*padding: 0;*/
+    /*margin-top: 15px;*/
+    /*margin-right: 15px;*/
+/*}*/
 
 div.borderedDiv {
     border: 2px #dddddd;
@@ -107,20 +96,16 @@ div.table {
     /*width: 300px;*/
     float:left;
 }
-div.input {
-    margin: 5px;
-    float:left;
-    width: 290px;
-}
+
 div#image {
     float: right;
 }
-div#input {
-    display: inline-block;
-    float: none;
-    width: 265px;
-    padding: 10px;
-}
+/*div#input {*/
+    /*display: inline-block;*/
+    /*float: none;*/
+    /*width: 265px;*/
+    /*padding: 10px;*/
+/*}*/
 div#link {
 
     text-align: center;
@@ -159,7 +144,7 @@ table#data td, th{
 
 #app .dropdown li a {
     padding: 10px 20px;
-    display: flex;
+    /*display: flexo*/
     width: 100%;
     align-items: center;
     font-size: 1.25em;
@@ -169,13 +154,13 @@ table#data td, th{
     padding-right: 0.5em;
 }
 
-#canvas
-{
-    width: 43%;
-    /*margin-left: 10px;*/
-    margin-top: 30px;
+/*#canvas*/
+/*{*/
+    /*width: 43%;*/
+    /*!*margin-left: 10px;*!*/
+    /*margin-top: 30px;*/
 
-}
+/*}*/
 
 .sharp {
     border-radius: 0;
@@ -200,10 +185,18 @@ table#data td, th{
     background-color: SlateGrey; /* Цвет кнопки при нажатии */
 }
 .form-group{
-    margin-left: 25px;
+    margin-left: 0;
 }
-.col-lg-6{
-    margin-left: 40px;
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
 }
 .portal{
     width: 600px;
@@ -226,4 +219,5 @@ table#data td, th{
 }
 #canvas{
     display: inline-block;
+
 }

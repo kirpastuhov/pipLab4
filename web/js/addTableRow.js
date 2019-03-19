@@ -15,7 +15,7 @@ function addTableRow() {
                             Math.round(json[i].x * 100)/100 +
                         "</td>" +
                         "<td class='dataY'>" +
-                            json[i].y +
+                            Math.round(json[i].y * 100)/100 +
                         "</td>" +
                         "<td class='dataR'>" +
                             json[i].r +

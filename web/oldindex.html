@@ -1,34 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" href="css/login.css">
     <meta charset="UTF-8">
-    <title>Lab 4</title>
+    <title>Title</title>
     <script src="https://unpkg.com/vue"></script>
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
 </head>
 <body style="background-color: #3c3d3e">
-<div class="login-page">
+<div class='row'>
+    <div class="col-lg-6 col-md-10" id="sign_in">
 
-    <div class="form" id="sign_in">
         <p>Saraev Vladislav | Kirill Pastuhov</p>
         <p>P3218 v.19083</p>
-        <br>
-
-        <form id="form" v-on:submit.prevent="addUser" class="login-form">
-            <input type="text" type="text" id="Login_S" v-model="newUser.login" placeholder="username" required/>
-            <input type="password" type="password" id="Password_S" v-model="newUser.password" placeholder="password" required/>
-            <button type="submit" v-on:click="loginUser">login</button>
-            <div class="errors">
-                <p class="message-err" v-show="!validation.login">username cannot be empty.</p>
-                <p class="message-err" v-show="!validation.password">password cannot be empty</p>
-            </div>
-            <p class="message">Not registered? <a href="register.html">Create an account</a></p>
-            <div class="hide-block"></div>
+        <p>Login</p>
+        <form id="form" v-on:submit.prevent="addUser">
+            <input class="form-control" type="text" id="Login_S" v-model="newUser.login" placeholder="Login">
+            <br>
+            <input class="form-control " type="password" id="Password_S" v-model="newUser.password"
+                   placeholder="Password">
+            <br>
+            <ul class="errors">
+                <li v-show="!validation.login">Login cannot be empty.</li>
+                <li v-show="!validation.password">Password cannot be empty</li>
+            </ul>
+            <input type="submit" class="btn-submit sharp" style="border:1px solid #dddddd;" value="Sign In"
+                   v-on:click="loginUser">
         </form>
+        <br>
+        <button class="btn-submit sharp" style="border:1px solid #dddddd;" onclick="location.href='register.html'">
+            To registration
+        </button>
     </div>
 </div>
+</div>
+
 <script>
     let passwordRE = /./;
 
@@ -78,13 +85,13 @@
                         content: json
                     },
                     success: function () {
-                        // location.href = 'http://localhost:1314/Lab4_war/main.html'
+                       // location.href = 'http://localhost:1314/Lab4_war/main.html'
                         // location.href = 'http://localhost:3080/Lab_4_war/main.html'
-                        location.href =  'http://localhost:8080/Lab_4_war_exploded/main.html'
+                        location.href = 'http://localhost:8080/Lab_4_war_exploded/main.html'
                     },
                     statusCode: {
                         500: function () {
-                            $('.hide-block').html("incorrect username or password");
+                            $('.hide-block').html("User not found");
                         }
                     }
 
