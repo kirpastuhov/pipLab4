@@ -67,4 +67,12 @@ public class HitRecordController {
         int user_id = Integer.parseInt(session.getAttribute("Id").toString());
         return Response.ok().entity(gson.toJson(hitDataRecord.getHitData(user_id))).build();
     }
+    @GET
+    @Path("/lasthit")
+    public Response getLastHit(@Context HttpServletRequest request){
+        HttpSession session = request.getSession();
+        Gson gson = new Gson();
+        int user_id = Integer.parseInt(session.getAttribute("Id").toString());
+        return Response.ok().entity(gson.toJson(hitDataRecord.getLatsHit(user_id))).build();
+    }
 }
