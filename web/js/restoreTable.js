@@ -33,6 +33,13 @@ function restoreTable() {
                         "");
                 }
             }
+        },
+        statusCode: {
+            500: function () {
+                // location.href = 'http://localhost:1314/Lab4_war/error.html'
+                //  location.href = 'http://localhost:3080/Lab4_war/error.html'
+                location.href = 'http://localhost:8080_exploded/Lab_4_war_exploded/error.html'
+            }
         }
     })
 }
