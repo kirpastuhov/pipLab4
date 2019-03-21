@@ -68,7 +68,7 @@ public class HitRecordController {
         return Response.ok().entity(gson.toJson(hitDataRecord.getHitData(user_id))).build();
     }
     @GET
-    @Path("/lasthit")
+    @Path("/last")
     public Response getLastHit(@Context HttpServletRequest request){
         HttpSession session = request.getSession();
         Gson gson = new Gson();

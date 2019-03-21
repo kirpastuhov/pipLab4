@@ -1,8 +1,8 @@
 function addTableRow() {
-    $("#hits_table td").remove();
+    //$("#hits_table td").remove();
     $.ajax({
        //url: 'http://localhost:8968/Lab4_war/web/hitdata/read',
-          url : 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/read',
+          url : 'http://localhost:8080/Lab_4_war_exploded/web/hitdata/last',
         // url: 'http://localhost:3080/Lab4_war/web/hitdata/read',
         method: "get",
         success: function (response) {
@@ -15,7 +15,7 @@ function addTableRow() {
                             Math.round(json[i].x * 100)/100 +
                         "</td>" +
                         "<td class='dataY'>" +
-                            json[i].y +
+                            Math.round(json[i].y * 100)/100 +
                         "</td>" +
                         "<td class='dataR'>" +
                             json[i].r +

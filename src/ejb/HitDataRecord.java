@@ -52,7 +52,7 @@ public class HitDataRecord {
         return userHits;
     }
     public List<P4_HitData> getLatsHit(int user_id){
-        TypedQuery<P4_HitData> query = em.createNamedQuery("P4_HitData.getByLoginPassword",P4_HitData.class);
+        TypedQuery<P4_HitData> query = em.createNamedQuery("P4_HitData.getLastHit",P4_HitData.class);
         query.setParameter("user_id",user_id);
         List<P4_HitData> userHits = query.setMaxResults(1).getResultList();
         return userHits;

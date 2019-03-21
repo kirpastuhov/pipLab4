@@ -7,7 +7,8 @@ import java.util.Date;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "P4_HitData.getByLoginPassword", query = "select hitData from P4_HitData hitData where hitData.user_Id = :user_id")
+        @NamedQuery(name = "P4_HitData.getByLoginPassword", query = "select hitData from P4_HitData hitData where hitData.user_Id = :user_id"),
+        @NamedQuery(name = "P4_HitData.getLastHit", query = "select hitData from P4_HitData hitData where hitData.user_Id = :user_id ORDER BY hitData.id desc")
 })
 public class P4_HitData {
     @Id
