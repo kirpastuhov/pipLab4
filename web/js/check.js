@@ -6,8 +6,11 @@ $(document).ready(() => {
 function submit() {
     const x = Number($("#inputX").val());
     const y = Number($("#inputY").val());
-    if (!checkFields(y)) return;
-    sendRequest(x, y);
+    if (!y || y > 3 || y < 3){
+        const $y = $("#inputY");
+        alert("incorrect y value")
+    }
+    else sendRequest(x, y);
 }
 
 function sendHitData(X, Y, R) {
