@@ -18,10 +18,9 @@ public class AccessFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse res = (HttpServletResponse) servletResponse;
         HttpSession session = req.getSession();
-        String uri = req.getRequestURI();
 
         if((session.getAttribute("login") == null)){
-            res.sendRedirect("error.html");
+            res.sendRedirect("http://localhost:8080/Lab_4_war_exploded/error.html");
         }else{
             filterChain.doFilter(servletRequest, servletResponse);
         }
