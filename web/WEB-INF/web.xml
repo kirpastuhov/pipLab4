@@ -17,6 +17,6 @@
 
     <filter-mapping>
         <filter-name>AccessFilter</filter-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/main.html</url-pattern>
     </filter-mapping>
 </web-app>
