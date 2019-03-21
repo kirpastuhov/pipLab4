@@ -6,9 +6,8 @@ $(document).ready(() => {
 function submit() {
     const x = Number($("#inputX").val());
     const y = Number($("#inputY").val());
-    if (!y || y > 3 || y < 3){
-        const $y = $("#inputY");
-        alert("incorrect y value")
+    if (!y || y > 3 || y < -3){
+        return
     }
     else sendRequest(x, y);
 }
